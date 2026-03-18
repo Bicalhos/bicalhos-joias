@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Feed de Produtos — Bicalhos Jóias</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://pcbtbmoznadersprmfrv.supabase.co";
+const SUPABASE_KEY = "sb_publishable_RYuWAcA6RYzHINsd_Zgbxw_UUlfanQW";
+const SITE_URL = "https://bicalhosjoias.com.br";
+
+async function gerarFeed() {
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const { data, error } = await sb.from("produtos").select("*").order("created_at", { ascending: false });
+
+  if (error) {
+    document.body.innerHTML = "<pre>Erro: " + error.message + "</pre>";
+    return;
+  }
+
+  const items = (data || []).map(p => {
+    const id = p.id;
+    const nome = (p.name || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    const desc = (p.description || p.name || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    const preco = Number(p.price || 0).toFixed(2);
+    const img = p.img_url || "";
+    const categoria = (p.category || "Joias").replace(/&/g,"&amp;");
+    const material = (p.material || "").replace(/&/g,"&amp;");
+    const link = SITE_URL + "/#produto-" + id;
+
+    return `  <item>
+    <id>${id}</id>
+    <title>${nome}</title>
+    <description>${desc}${material ? " — Material: " + material : ""}</description>
+    <availability>in stock</availability>
+    <condition>new</condition>
+    <price>${preco} BRL</price>
+    <link>${link}</link>
+    <image_link>${img}</image_link>
+    <brand>Bicalhos Jóias</brand>
+    <google_product_category>188</google_product_category>
+    <product_type>${categoria}</product_type>
+  </item>`;
+  }).join("\n");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>Bicalhos Jóias — Catálogo</title>
+    <link>${SITE_URL}</link>
+    <description>Joias artesanais personalizadas em todos os metais</description>
+${items}
+  </channel>
+</rss>`;
+
+  document.open("text/xml");
+  document.write(xml);
+  document.close();
+}
+
+gerarFeed();
+</script>
+</body>
+</html>
