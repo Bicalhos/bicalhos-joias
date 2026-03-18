@@ -46,26 +46,20 @@ nav a:hover{color:var(--gold)}
 .btn-admin{background:var(--dark);color:var(--gold-light)!important;padding:0.35rem 0.9rem;border-radius:var(--radius);font-size:0.72rem!important}
 .btn-admin:hover{background:var(--mid)!important}
 
-/* HERO CAROUSEL */
-.hero{position:relative;min-height:82vh;overflow:hidden;background:var(--dark)}
-.carousel-track{display:flex;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1);height:100%;min-height:82vh}
-.carousel-slide{min-width:100%;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:4rem 2rem}
-.carousel-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity 0.5s}
-.carousel-slide-overlay{position:absolute;inset:0;background:rgba(26,22,18,0.52)}
-.carousel-slide-content{position:relative;z-index:2;max-width:640px}
+/* HERO VIDEO */
+.hero{position:relative;overflow:hidden;background:var(--dark)}
+.hero-video-wrap{position:relative;width:100%;min-height:82vh;display:flex;align-items:center;justify-content:center}
+.hero-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;object-fit:cover;pointer-events:none}
+.hero-video-overlay{position:absolute;inset:0;background:rgba(26,22,18,0.52);z-index:1}
+.hero-video-content{position:relative;z-index:2;text-align:center;padding:4rem 2rem;max-width:640px;min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero-badge{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(232,212,139,0.4);padding:0.3rem 1rem;border-radius:20px;margin-bottom:1.4rem;display:inline-block}
 .hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.6rem,6vw,4.8rem);font-weight:300;line-height:1.15;color:#FAF7F2;margin-bottom:1rem}
 .hero h1 em{font-style:italic;color:var(--gold-light)}
 .hero p{font-size:1rem;color:rgba(250,247,242,0.75);max-width:400px;margin:0 auto 2.2rem;line-height:1.7;font-weight:300}
 .btn-cta{background:var(--gold-dark);color:var(--cream);padding:0.8rem 2rem;border-radius:var(--radius);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;display:inline-block}
 .btn-cta:hover{background:var(--gold)}
-.carousel-dots{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:0.5rem;z-index:10}
-.carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(250,247,242,0.4);cursor:pointer;transition:all 0.3s;border:none}
-.carousel-dot.active{background:var(--gold-light);width:24px;border-radius:4px}
-.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(250,247,242,0.15);border:1px solid rgba(250,247,242,0.3);color:#FAF7F2;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;backdrop-filter:blur(4px)}
-.carousel-btn:hover{background:rgba(250,247,242,0.3)}
-.carousel-btn.prev{left:1.5rem}
-.carousel-btn.next{right:1.5rem}
+.hero-sound-btn{position:absolute;bottom:1.5rem;right:1.5rem;background:rgba(250,247,242,0.15);border:1px solid rgba(250,247,242,0.3);color:#FAF7F2;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;backdrop-filter:blur(4px);z-index:5}
+.hero-sound-btn:hover{background:rgba(250,247,242,0.3)}
 
 /* HERO CIRCLES */
 .hero-circles{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
@@ -73,6 +67,16 @@ nav a:hover{color:var(--gold)}
 .hero-circle-1{width:280px;height:280px;top:-60px;right:-60px}
 .hero-circle-2{width:220px;height:220px;bottom:-40px;left:-40px}
 .hero-circle img{width:100%;height:100%;object-fit:cover;border-radius:50%;opacity:0.55}
+
+/* VIDEO SECTION */
+.video-section{background:var(--dark);padding:0;overflow:hidden;position:relative;display:flex;justify-content:center;align-items:center}
+.video-wrap{position:relative;width:100%;max-width:480px;margin:0 auto}
+.video-wrap iframe{display:block;width:100%;aspect-ratio:9/16;border:none}
+.video-overlay-text{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);text-align:center;z-index:2;pointer-events:none}
+.video-overlay-text p{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-style:italic;color:rgba(250,247,242,0.7);letter-spacing:0.08em;white-space:nowrap}
+.video-sound-btn{position:absolute;bottom:1.2rem;right:1.2rem;background:rgba(250,247,242,0.15);border:1px solid rgba(250,247,242,0.3);color:#FAF7F2;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;backdrop-filter:blur(4px);z-index:5}
+.video-sound-btn:hover{background:rgba(250,247,242,0.3)}
+@media(min-width:768px){.video-wrap{max-width:360px}}
 
 /* FILTER BAR */
 .filter-bar{padding:1.5rem 2rem;display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;justify-content:center;border-bottom:1px solid var(--border);background:var(--white)}
@@ -219,7 +223,7 @@ textarea{resize:vertical;min-height:80px}
   </nav>
 </header>
 
-<!-- HERO CAROUSEL -->
+<!-- HERO VIDEO -->
 <section class="hero" id="hero">
   <div class="hero-circles">
     <div class="hero-circle hero-circle-1" id="circle1">
@@ -229,12 +233,21 @@ textarea{resize:vertical;min-height:80px}
       <img id="circle2-img" src="" alt="" style="display:none"/>
     </div>
   </div>
-  <div class="carousel-track" id="carousel-track">
-    <!-- slides injected by JS -->
+  <div class="hero-video-wrap">
+    <iframe id="hero-yt"
+      src="https://www.youtube.com/embed/tzL96OgJJ0Y?autoplay=1&mute=1&loop=1&playlist=tzL96OgJJ0Y&controls=0&modestbranding=1&playsinline=1&rel=0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-video-content">
+      <span class="hero-badge">Feito à mão · Personalizado para você</span>
+      <h1>Você imagina, <em>nós criamos</em></h1>
+      <p>Joias personalizadas em todos os metais — ouro, prata, cobre, latão e alpaca.</p>
+      <a href="#catalogo" class="btn-cta">Ver Catálogo</a>
+    </div>
+    <button class="hero-sound-btn" id="hero-sound-btn" onclick="toggleHeroSound()" title="Ativar/desativar som">🔇</button>
   </div>
-  <button class="carousel-btn prev" onclick="carouselPrev()">&#8592;</button>
-  <button class="carousel-btn next" onclick="carouselNext()">&#8594;</button>
-  <div class="carousel-dots" id="carousel-dots"></div>
 </section>
 
 <!-- FILTER BAR -->
@@ -471,8 +484,6 @@ config.name     = config.name     || "Bicalhos Jóias";
 let products = [];
 let banners = [];
 let currentFilter = "todos";
-let carouselIdx = 0;
-let carouselTimer = null;
 // material is now free text - no mapping needed
 
 // ========== UPLOAD ==========
@@ -514,7 +525,6 @@ async function loadProducts() {
 async function loadBanners() {
   const { data } = await sb.from("banners").select("*").eq("ativo", true).order("ordem");
   banners = data || [];
-  renderCarousel();
   renderCircles();
 }
 
@@ -537,43 +547,14 @@ function showCatalogLoading(on) {
   if (on) grid.innerHTML = "<div style=\"grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-style:italic;font-family:\'Cormorant Garamond\',serif;font-size:1.1rem\">Carregando catálogo...</div>";
 }
 
-// ========== CAROUSEL ==========
-function renderCarousel() {
-  const heroBanners = banners.filter(b => b.tipo === "hero");
-  const track = document.getElementById("carousel-track");
-  const dots  = document.getElementById("carousel-dots");
-  if (!heroBanners.length) {
-    track.innerHTML = `<div class="carousel-slide"><div class="carousel-slide-bg" style="background:linear-gradient(160deg,#1A1612 60%,#2C1E10 100%)"></div><div class="carousel-slide-overlay"></div><div class="carousel-slide-content"><span class="hero-badge">Feito à mão · Personalizado para você</span><h1>Você imagina, <em>nós criamos</em></h1><p>Joias personalizadas em todos os metais — ouro, prata, cobre, latão e alpaca.</p><a href="#catalogo" class="btn-cta">Ver Catálogo</a></div></div>`;
-    dots.innerHTML = "";
-    return;
-  }
-  track.innerHTML = heroBanners.map((b, i) => `
-    <div class="carousel-slide">
-      <div class="carousel-slide-bg" style="background-image:url(${b.img_url});background-size:cover;background-position:center"></div>
-      <div class="carousel-slide-overlay"></div>
-      <div class="carousel-slide-content">
-        <span class="hero-badge">Feito à mão · Personalizado para você</span>
-        <h1>${escHtml(b.titulo || "Você imagina,")}<br><em>${escHtml(b.subtitulo || "nós criamos")}</em></h1>
-        <a href="#catalogo" class="btn-cta">Ver Catálogo</a>
-      </div>
-    </div>`).join("");
-  dots.innerHTML = heroBanners.map((_, i) => `<button class="carousel-dot ${i===0?"active":""}" onclick="goToSlide(${i})"></button>`).join("");
-  carouselIdx = 0;
-  startCarouselTimer();
-}
-
-function goToSlide(idx) {
-  const heroBanners = banners.filter(b => b.tipo === "hero");
-  if (!heroBanners.length) return;
-  carouselIdx = (idx + heroBanners.length) % heroBanners.length;
-  document.getElementById("carousel-track").style.transform = `translateX(-${carouselIdx * 100}%)`;
-  document.querySelectorAll(".carousel-dot").forEach((d, i) => d.classList.toggle("active", i === carouselIdx));
-}
-function carouselPrev() { goToSlide(carouselIdx - 1); }
-function carouselNext() { goToSlide(carouselIdx + 1); }
-function startCarouselTimer() {
-  if (carouselTimer) clearInterval(carouselTimer);
-  carouselTimer = setInterval(() => carouselNext(), 5000);
+// ========== HERO VIDEO SOUND ==========
+let heroMuted = true;
+function toggleHeroSound() {
+  heroMuted = !heroMuted;
+  const iframe = document.getElementById("hero-yt");
+  const btn = document.getElementById("hero-sound-btn");
+  iframe.src = "https://www.youtube.com/embed/tzL96OgJJ0Y?autoplay=1&mute=" + (heroMuted?"1":"0") + "&loop=1&playlist=tzL96OgJJ0Y&controls=0&modestbranding=1&playsinline=1&rel=0";
+  btn.textContent = heroMuted ? "🔇" : "🔊";
 }
 
 // ========== CIRCLES ==========
