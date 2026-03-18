@@ -331,6 +331,28 @@ textarea{resize:vertical;min-height:80px}
           <div class="upload-progress" id="upload-produto-prog"><div class="upload-progress-bar" id="upload-produto-bar"></div></div>
           <img id="upload-produto-preview" class="upload-preview" alt="preview"/>
           <input type="hidden" id="f-img-url"/>
+        <div class="form-group full" style="margin-top:0.75rem">
+          <label>Foto 2 (opcional)</label>
+          <div class="upload-area">
+            <input type="file" id="f-img-file2" accept="image/*" onchange="previewUpload(this,'upload-produto-preview2','upload-produto-prog2')"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+            <p>Clique ou arraste a 2ª foto</p>
+          </div>
+          <div class="upload-progress" id="upload-produto-prog2"><div class="upload-progress-bar" id="upload-produto-bar2"></div></div>
+          <img id="upload-produto-preview2" class="upload-preview" alt="preview 2"/>
+          <input type="hidden" id="f-img-url2"/>
+        </div>
+        <div class="form-group full" style="margin-top:0.75rem">
+          <label>Foto 3 (opcional)</label>
+          <div class="upload-area">
+            <input type="file" id="f-img-file3" accept="image/*" onchange="previewUpload(this,'upload-produto-preview3','upload-produto-prog3')"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+            <p>Clique ou arraste a 3ª foto</p>
+          </div>
+          <div class="upload-progress" id="upload-produto-prog3"><div class="upload-progress-bar" id="upload-produto-bar3"></div></div>
+          <img id="upload-produto-preview3" class="upload-preview" alt="preview 3"/>
+          <input type="hidden" id="f-img-url3"/>
+        </div>
         </div>
         <div class="form-actions">
           <button class="btn-save" id="btn-save-produto" onclick="saveProduct()">Salvar Produto</button>
@@ -484,7 +506,7 @@ async function loadProducts() {
   showCatalogLoading(true);
   const { data, error } = await sb.from("produtos").select("*").order("created_at", { ascending: false });
   if (error) { showToast("Erro: " + error.message); showCatalogLoading(false); return; }
-  products = (data || []).map(p => ({ id: p.id, name: p.name, material: p.material, category: p.category, price: p.price, desc: p.description, img: p.img_url || "" }));
+  products = (data || []).map(p => ({ id: p.id, name: p.name, material: p.material, category: p.category, price: p.price, desc: p.description, img: p.img_url || "", img2: p.img_url2 || "", img3: p.img_url3 || "" }));
   showCatalogLoading(false);
   renderCatalog();
 }
@@ -724,11 +746,33 @@ function openProduct(id) {
   const side = document.getElementById("modal-img-side");
   const ex = side.querySelector("img.modal-product-img");
   if (ex) ex.remove();
-  if (p.img) {
-    const img = document.createElement("img");
-    img.src = p.img; img.alt = p.name; img.className = "modal-product-img";
-    img.style.cssText = "width:100%;height:100%;object-fit:cover;display:block;";
-    side.insertBefore(img, side.firstChild);
+  const fotos = [p.img, p.img2, p.img3].filter(f => f);
+  if (fotos.length) {
+    let gIdx = 0;
+    const gWrap = document.createElement("div");
+    gWrap.style.cssText = "width:100%;height:100%;position:relative;";
+    const gImg = document.createElement("img");
+    gImg.src = fotos[0]; gImg.alt = p.name; gImg.className = "modal-product-img";
+    gImg.style.cssText = "width:100%;height:100%;object-fit:cover;display:block;";
+    gWrap.appendChild(gImg);
+    if (fotos.length > 1) {
+      const dots = document.createElement("div");
+      dots.style.cssText = "position:absolute;bottom:0.75rem;left:50%;transform:translateX(-50%);display:flex;gap:6px;";
+      fotos.forEach((_, i) => {
+        const d = document.createElement("button");
+        d.style.cssText = `width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;background:${i===0?"rgba(250,247,242,0.95)":"rgba(250,247,242,0.4)"};transition:background 0.2s;padding:0;`;
+        d.onclick = () => { gIdx=i; gImg.src=fotos[i]; dots.querySelectorAll("button").forEach((b,j)=>b.style.background=j===i?"rgba(250,247,242,0.95)":"rgba(250,247,242,0.4)"); };
+        dots.appendChild(d);
+      });
+      const prev = document.createElement("button");
+      prev.innerHTML = "&#8592;"; prev.style.cssText = "position:absolute;left:0.5rem;top:50%;transform:translateY(-50%);background:rgba(250,247,242,0.2);border:none;color:#FAF7F2;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;";
+      prev.onclick = () => { gIdx=(gIdx-1+fotos.length)%fotos.length; gImg.src=fotos[gIdx]; dots.querySelectorAll("button").forEach((b,j)=>b.style.background=j===gIdx?"rgba(250,247,242,0.95)":"rgba(250,247,242,0.4)"); };
+      const next = document.createElement("button");
+      next.innerHTML = "&#8594;"; next.style.cssText = "position:absolute;right:0.5rem;top:50%;transform:translateY(-50%);background:rgba(250,247,242,0.2);border:none;color:#FAF7F2;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;";
+      next.onclick = () => { gIdx=(gIdx+1)%fotos.length; gImg.src=fotos[gIdx]; dots.querySelectorAll("button").forEach((b,j)=>b.style.background=j===gIdx?"rgba(250,247,242,0.95)":"rgba(250,247,242,0.4)"); };
+      gWrap.appendChild(prev); gWrap.appendChild(next); gWrap.appendChild(dots);
+    }
+    side.insertBefore(gWrap, side.firstChild);
   }
   document.getElementById("product-modal").classList.add("open");
 }
@@ -793,8 +837,15 @@ function showNewProductForm() {
   document.getElementById("edit-id").value = "";
   ["f-name","f-price","f-desc","f-material"].forEach(id => document.getElementById(id).value = "");
   populateCatDropdown("");
-  document.getElementById("f-img-url").value = "";
-  document.getElementById("upload-produto-preview").style.display = "none";
+  document.getElementById("f-img-url").value = p.img || "";
+  document.getElementById("f-img-url2").value = p.img2 || "";
+  document.getElementById("f-img-url3").value = p.img3 || "";
+  const prev = document.getElementById("upload-produto-preview");
+  if (p.img) { prev.src = p.img; prev.style.display = "block"; } else { prev.style.display = "none"; }
+  const prev2 = document.getElementById("upload-produto-preview2");
+  if (p.img2) { prev2.src = p.img2; prev2.style.display = "block"; } else { prev2.style.display = "none"; }
+  const prev3 = document.getElementById("upload-produto-preview3");
+  if (p.img3) { prev3.src = p.img3; prev3.style.display = "block"; } else { prev3.style.display = "none"; }
   document.getElementById("product-form").style.display = "block";
   document.getElementById("product-form").scrollIntoView({behavior:"smooth"});
 }
@@ -810,8 +861,12 @@ function editProduct(id) {
   populateCatDropdown(p.category || "");
   document.getElementById("f-price").value = p.price;
   document.getElementById("f-desc").value = p.desc || "";
-  document.getElementById("f-img-url").value = p.img || "";
-  const prev = document.getElementById("upload-produto-preview");
+  document.getElementById("f-img-url").value = "";
+  document.getElementById("f-img-url2").value = "";
+  document.getElementById("f-img-url3").value = "";
+  document.getElementById("upload-produto-preview").style.display = "none";
+  document.getElementById("upload-produto-preview2").style.display = "none";
+  document.getElementById("upload-produto-preview3").style.display = "none";
   if (p.img) { prev.src = p.img; prev.style.display = "block"; } else { prev.style.display = "none"; }
   document.getElementById("product-form").style.display = "block";
   document.getElementById("product-form").scrollIntoView({behavior:"smooth"});
@@ -830,7 +885,13 @@ async function saveProduct() {
     const url = await uploadFile(file, "produtos", "upload-produto-bar");
     if (url) imgUrl = url;
   }
-  const row = { name, price, material: document.getElementById("f-material").value, category: document.getElementById("f-category").value, description: document.getElementById("f-desc").value.trim(), img_url: imgUrl };
+  let imgUrl2 = document.getElementById("f-img-url2").value;
+  const file2 = document.getElementById("f-img-file2").files[0];
+  if (file2) { const u = await uploadFile(file2,"produtos","upload-produto-bar2"); if(u) imgUrl2=u; }
+  let imgUrl3 = document.getElementById("f-img-url3").value;
+  const file3 = document.getElementById("f-img-file3").files[0];
+  if (file3) { const u = await uploadFile(file3,"produtos","upload-produto-bar3"); if(u) imgUrl3=u; }
+  const row = { name, price, material: document.getElementById("f-material").value, category: document.getElementById("f-category").value, description: document.getElementById("f-desc").value.trim(), img_url: imgUrl, img_url2: imgUrl2, img_url3: imgUrl3 };
   const editId = document.getElementById("edit-id").value;
   const { error } = editId ? await sb.from("produtos").update(row).eq("id", editId) : await sb.from("produtos").insert(row);
   btn.textContent = "Salvar Produto"; btn.disabled = false;
