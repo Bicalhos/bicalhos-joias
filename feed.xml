@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>Bicalhos Jóias — Catálogo</title>
+    <link>https://bicalhosjoias.com.br</link>
+    <description>Joias artesanais personalizadas em todos os metais. São Paulo — SP.</description>
+  <item>
+    <g:id>bicalhos-001</g:id>
+    <g:title>anel desenhado corações em Alpaca</g:title>
+    <g:description>Joia artesanal — anel desenhado corações em Alpaca. Material: Alpaca. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773867888898_rns1301a62.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>25.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Anéis</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-002</g:id>
+    <g:title>bracelete em Alpaca desenhado</g:title>
+    <g:description>Joia artesanal — bracelete em Alpaca desenhado. Material: Alpaca. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773867551902_gb5xv2v8uyn.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>35.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pulseiras</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-003</g:id>
+    <g:title>pulseira grumete 4mm cobre</g:title>
+    <g:description>Joia artesanal — pulseira grumete 4mm cobre. Material: Cobre. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773860587479_hqeo573hm18.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>120.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pulseiras</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-004</g:id>
+    <g:title>pingente de prata cruz</g:title>
+    <g:description>Joia artesanal — pingente de prata cruz. Material: Prata. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773858707259_09fswo10brdq.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>190.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pingentes</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-005</g:id>
+    <g:title>Aliança de cobre 6mm</g:title>
+    <g:description>Joia artesanal — Aliança de cobre 6mm. Material: Cobre. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773858606127_cjordk16wu.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>90.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-006</g:id>
+    <g:title>Bracelete trançado em cobre</g:title>
+    <g:description>Joia artesanal — Bracelete trançado em cobre. Material: Cobre. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773857749488_agemllyjsv.webp</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>180.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pulseiras</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-007</g:id>
+    <g:title>Bracelete de cobre e Alpaca</g:title>
+    <g:description>Joia artesanal — Bracelete de cobre e Alpaca. Material: Cobre e Alpaca. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773857640647_ekr1htm16t.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>490.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pulseiras</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-008</g:id>
+    <g:title>Bracelete de cobre com pedras naturais</g:title>
+    <g:description>Joia artesanal — Bracelete de cobre com pedras naturais. Material: Cobre. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773856617763_6f2nq656ech.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>290.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pulseiras</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-009</g:id>
+    <g:title>Anel de Letra redondo Letra S</g:title>
+    <g:description>Joia artesanal — Anel de Letra redondo Letra S. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773856482550_g4nvfgkz9uj.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>180.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Anéis</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-010</g:id>
+    <g:title>Aliança de cobre toda cravejada 10mm</g:title>
+    <g:description>Joia artesanal — Aliança de cobre toda cravejada 10mm. Material: Cobre. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773850959036_o3qa6gzd79i.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>280.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-011</g:id>
+    <g:title>Aliança 10mm toda cravejada feminina</g:title>
+    <g:description>Joia artesanal — Aliança 10mm toda cravejada feminina. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773850840737_pswk1pz5pfd.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>890.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-012</g:id>
+    <g:title>Aliança par todo cravejado 10mm</g:title>
+    <g:description>Joia artesanal — Aliança par todo cravejado 10mm. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773850749393_we223u6e6y.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>1250.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-013</g:id>
+    <g:title>Alianças 3mm moedas antigas com forro de aço</g:title>
+    <g:description>Joia artesanal — Alianças 3mm moedas antigas com forro de aço. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773850406195_w8y1ri6zdca.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>220.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-014</g:id>
+    <g:title>Anel de formatura DIREITO</g:title>
+    <g:description>Joia artesanal — Anel de formatura DIREITO. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773803402709_4y4qmx1scia.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>380.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Anéis</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-015</g:id>
+    <g:title>Pingente São Bento</g:title>
+    <g:description>Joia artesanal — Pingente São Bento. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773707056081_logqp4qgqg.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>180.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Pingentes</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-016</g:id>
+    <g:title>Corrente Cadeado 5mm</g:title>
+    <g:description>Joia artesanal — Corrente Cadeado 5mm. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773798155490_0009xgmp60cqwj.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>180.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Correntes</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-017</g:id>
+    <g:title>Anel de Bodas de Prata</g:title>
+    <g:description>Joia artesanal — Anel de Bodas de Prata. Material: Moedas e Aço. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773797795910_1jmwyk8h5q7.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>380.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-018</g:id>
+    <g:title>Aliança reta com friso e 1 zirconia</g:title>
+    <g:description>Joia artesanal — Aliança reta com friso e 1 zirconia. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773797619186_q2144yglx7c.jpg</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>220.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  <item>
+    <g:id>bicalhos-019</g:id>
+    <g:title>Aliança 6mm com forro de aço</g:title>
+    <g:description>Joia artesanal — Aliança 6mm com forro de aço. Material: Moedas antigas. Feita à mão pela Bicalhos Jóias, São Paulo.</g:description>
+    <g:link>https://bicalhosjoias.com.br/#catalogo</g:link>
+    <g:image_link>https://pcbtbmoznadersprmfrv.supabase.co/storage/v1/object/public/imagens/produtos/1773796666280_zaogaq0fi0m.png</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>220.00 BRL</g:price>
+    <g:brand>Bicalhos Jóias</g:brand>
+    <g:google_product_category>188</g:google_product_category>
+    <g:product_type>Alianças</g:product_type>
+  </item>
+  </channel>
+</rss>
