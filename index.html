@@ -1082,9 +1082,7 @@ async function importarCSV(input) {
   status.style.display = "block";
   status.textContent = "Lendo arquivo...";
   const text = await file.text();
-  const lines = text.replace(/
-/g,"").split("
-").filter(l => l.trim());
+  const lines = text.replace(/\r/g,"").split("\n").filter(l => l.trim());
   const header = lines[0].toLowerCase();
   if (!header.includes("name") || !header.includes("price")) {
     showToast("Arquivo inválido — use o CSV exportado daqui!"); 
