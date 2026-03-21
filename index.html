@@ -353,7 +353,15 @@ textarea{resize:vertical;min-height:80px}
 
     <!-- TAB PRODUTOS -->
     <div class="admin-tab-content active" id="tab-produtos">
-      <button class="btn-new" onclick="showNewProductForm()">+ Adicionar Produto</button>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+        <button class="btn-new" style="margin-bottom:0" onclick="showNewProductForm()">+ Adicionar Produto</button>
+        <button class="btn-new" style="margin-bottom:0;border-color:var(--mid);color:var(--mid)" onclick="exportarCSV()">⬇ Exportar CSV</button>
+        <label class="btn-new" style="margin-bottom:0;border-color:var(--mid);color:var(--mid);cursor:pointer">
+          ⬆ Importar CSV
+          <input type="file" id="import-csv" accept=".csv" style="display:none" onchange="importarCSV(this)"/>
+        </label>
+      </div>
+      <div id="import-status" style="display:none;font-size:0.82rem;color:var(--muted);margin-bottom:1rem;font-style:italic"></div>
       <div class="product-list-admin" id="product-list-admin"></div>
       <div class="admin-form" id="product-form" style="display:none">
         <h3 id="form-title">Novo Produto</h3>
@@ -1041,6 +1049,103 @@ function showToast(msg) {
   const t = document.getElementById("toast");
   t.textContent = msg; t.classList.add("show");
   setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+// ========== EXPORTAR / IMPORTAR CSV ==========
+function exportarCSV() {
+  if (!products.length) { showToast("Nenhum produto para exportar!"); return; }
+  const header = "id,name,material,category,price,description,img_url,img_url2,img_url3";
+  const rows = products.map(p => [
+    p.id,
+    '"' + (p.name||"").replace(/"/g,'""') + '"',
+    '"' + (p.material||"").replace(/"/g,'""') + '"',
+    '"' + (p.category||"").replace(/"/g,'""') + '"',
+    p.price||0,
+    '"' + (p.desc||"").replace(/"/g,'""') + '"',
+    '"' + (p.img||"") + '"',
+    '"' + (p.img2||"") + '"',
+    '"' + (p.img3||"") + '"'
+  ].join(",")).join("
+");
+  const csv = header + "
+" + rows;
+  const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "bicalhos-produtos-" + new Date().toISOString().slice(0,10) + ".csv";
+  a.click(); URL.revokeObjectURL(url);
+  showToast("CSV exportado com " + products.length + " produtos!");
+}
+
+async function importarCSV(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const status = document.getElementById("import-status");
+  status.style.display = "block";
+  status.textContent = "Lendo arquivo...";
+  const text = await file.text();
+  const lines = text.replace(//g,"").split("
+").filter(l => l.trim());
+  const header = lines[0].toLowerCase();
+  if (!header.includes("name") || !header.includes("price")) {
+    showToast("Arquivo inválido — use o CSV exportado daqui!"); 
+    status.style.display = "none";
+    return;
+  }
+  const cols = lines[0].split(",").map(c => c.trim().replace(/"/g,""));
+  const idx = (name) => cols.findIndex(c => c.toLowerCase() === name.toLowerCase());
+  const iName = idx("name"), iMat = idx("material"), iCat = idx("category");
+  const iPrice = idx("price"), iDesc = idx("description");
+  const iImg = idx("img_url"), iImg2 = idx("img_url2"), iImg3 = idx("img_url3");
+  const iId = idx("id");
+
+  function parseCSVLine(line) {
+    const result = []; let cur = ""; let inQuote = false;
+    for (let i = 0; i < line.length; i++) {
+      const c = line[i];
+      if (c === '"') { if (inQuote && line[i+1] === '"') { cur += '"'; i++; } else inQuote = !inQuote; }
+      else if (c === ',' && !inQuote) { result.push(cur); cur = ""; }
+      else cur += c;
+    }
+    result.push(cur);
+    return result;
+  }
+
+  const dataLines = lines.slice(1).filter(l => l.trim());
+  let criados = 0, atualizados = 0, erros = 0;
+
+  status.textContent = `Importando ${dataLines.length} produtos...`;
+
+  for (const line of dataLines) {
+    const c = parseCSVLine(line);
+    const name = c[iName]?.trim();
+    const price = parseFloat(c[iPrice]) || 0;
+    if (!name) { erros++; continue; }
+    const row = {
+      name,
+      material: c[iMat]?.trim() || "",
+      category: c[iCat]?.trim() || "",
+      price,
+      description: c[iDesc]?.trim() || "",
+      img_url:  c[iImg]?.trim()  || "",
+      img_url2: c[iImg2]?.trim() || "",
+      img_url3: c[iImg3]?.trim() || "",
+    };
+    const existingId = c[iId]?.trim();
+    if (existingId && existingId.length > 10) {
+      const { error } = await sb.from("produtos").update(row).eq("id", existingId);
+      if (error) erros++; else atualizados++;
+    } else {
+      const { error } = await sb.from("produtos").insert(row);
+      if (error) erros++; else criados++;
+    }
+  }
+
+  await loadProducts();
+  renderAdminProducts();
+  input.value = "";
+  status.style.display = "none";
+  showToast(`Importado! ${criados} criados · ${atualizados} atualizados · ${erros} erros`);
 }
 
 // ========== INIT ==========
