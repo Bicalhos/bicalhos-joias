@@ -1065,11 +1065,9 @@ function exportarCSV() {
     '"' + (p.img||"") + '"',
     '"' + (p.img2||"") + '"',
     '"' + (p.img3||"") + '"'
-  ].join(",")).join("
-");
-  const csv = header + "
-" + rows;
-  const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+  ].join(",")).join("\n");
+  const csv = header + "\n" + rows;
+  const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url; a.download = "bicalhos-produtos-" + new Date().toISOString().slice(0,10) + ".csv";
@@ -1084,7 +1082,8 @@ async function importarCSV(input) {
   status.style.display = "block";
   status.textContent = "Lendo arquivo...";
   const text = await file.text();
-  const lines = text.replace(//g,"").split("
+  const lines = text.replace(/
+/g,"").split("
 ").filter(l => l.trim());
   const header = lines[0].toLowerCase();
   if (!header.includes("name") || !header.includes("price")) {
