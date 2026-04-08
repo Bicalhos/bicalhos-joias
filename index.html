@@ -658,15 +658,18 @@ async function loadConfigs() {
   const { data } = await sb.from("configuracoes").select("*");
   if (!data) return;
   data.forEach(row => {
-    if (row.chave === "") config. = row.valor;
-    if (row.chave === "pixel")    config.pixel    = row.valor;
-    if (row.chave === "name")     config.name     = row.valor;
-    if (row.chave === "logo") {
-      document.getElementById("logo-header").src = row.valor;
-      document.getElementById("logo-preview-admin").src = row.valor;
+   if (row.chave && row.chave !== "") {
+      config[row.chave] = row.valor;
     }
-  });
-}
+    
+    if (row.chave === "pixel") config.pixel = row.valor;
+    if (row.chave === "name")  config.name  = row.valor;
+    if (row.chave === "logo") {
+      const logoHeader = document.getElementById("logo-header");
+      const logoAdmin = document.getElementById("logo-preview-admin");
+      if (logoHeader) logoHeader.src = row.valor;
+      if (logoAdmin) logoAdmin.src = row.valor;
+    }
 
 function showCatalogLoading(on) {
   const grid = document.getElementById("catalog-grid");
