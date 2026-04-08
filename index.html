@@ -624,11 +624,11 @@ async function loadProducts() {
     showCatalogLoading(true);
     const { data, error } = await sb.from("produtos").select("*").order("created_at", { ascending: false });
     
-    if (error) { 
-        showToast("Erro: " + error.message); 
-        showCatalogLoading(false); 
-        return; 
-    }
+    if (productsError) {
+    showToast("Erro ao carregar produtos: " + productsError.message);
+    showCatalogLoading(false);
+    return;
+  }
 
     products = (data || []).map(p => ({ 
         id: p.id, 
@@ -658,9 +658,10 @@ async function loadConfigs() {
   const { data } = await sb.from("configuracoes").select("*");
   if (!data) return;
   data.forEach(row => {
-   if (row.chave && row.chave !== "") {
+    if (row.chave && row.chave !== "") {
       config[row.chave] = row.valor;
     }
+  });  
     
     if (row.chave === "pixel") config.pixel = row.valor;
     if (row.chave === "name")  config.name  = row.valor;
