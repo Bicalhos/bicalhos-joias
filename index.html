@@ -697,7 +697,7 @@ function renderCatalog() {
         <p class="product-desc">${escHtml((p.desc||"").substring(0,72))}${p.desc&&p.desc.length>72?"…":""}</p>
         <div class="product-footer">
           <span class="product-price">R$ ${Number(p.price).toFixed(2).replace(".",",")}</span>
-                             ${p.stripe_url ? `
+                                      ${p.stripe_url ? `
             <a href="${escHtml(p.stripe_url)}" target="_blank" class="btn-comprar" style="background: #d4af37; color: #000; padding: 10px; text-align: center; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; display: block; border: 1px solid #d4af37;">
               Comprar Agora
             </a>
@@ -708,8 +708,9 @@ function renderCatalog() {
           </a>
         </div>
       </div>
-    </div>`).join(""); // <-- Verifique se termina com );
-} // <-- Verifique se fecha a função com }
+    </div>`).join("");
+}
+
 
 
 // ========== CATEGORIAS ==========
