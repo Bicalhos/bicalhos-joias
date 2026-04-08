@@ -584,8 +584,8 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const CONFIG_KEY = "joias_config";
 let config = JSON.parse(localStorage.getItem(CONFIG_KEY) || "{}");
-config. = config. || "5511930026051";
-config.pixel    = config.pixel    || "1433838881541428";
+config.wa = config.wa || "5511930026051"; 
+config.pixel = config.pixel || "1433838881541428";
 config.name     = config.name     || "Bicalhos Jóias";
 
 let products = [];
