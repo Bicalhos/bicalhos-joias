@@ -654,14 +654,15 @@ async function loadBanners() {
   renderCircles();
 }
 
-async function loadConfigs() {
-  const { data } = await sb.from("configuracoes").select("*");
-  if (!data) return;
-  data.forEach(row => {
-    if (row.chave && row.chave !== "") {
-      config[row.chave] = row.valor;
-    }
-  });  
+const { data, error } = await sb.from("configuracoes").select("*");
+  if (!error && data) {
+    data.forEach(row => {
+      // Forma segura de salvar sem o erro do ponto solitário
+      if (row.chave && row.chave.trim() !== "") {
+        config[row.chave] = row.valor;
+      }
+    });
+  }
     
     if (row.chave === "pixel") config.pixel = row.valor;
     if (row.chave === "name")  config.name  = row.valor;
