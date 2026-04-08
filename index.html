@@ -624,7 +624,7 @@ async function loadProducts() {
   showCatalogLoading(true);
   const { data, error } = await sb.from("produtos").select("*").order("created_at", { ascending: false });
   if (error) { showToast("Erro: " + error.message); showCatalogLoading(false); return; }
-  products = (data || []).map(p => ({ id: p.id, name: p.name, material: p.material, category: p.category, price: p.price, desc: p.description, img: p.img_url || "", img2: p.img_url2 || "", img3: p.img_url3 || "" }));
+  products = (data || []).map(p => ({ id: p.id, name: p.name, material: p.material, category: p.category, price: p.price, link: stripe_url, desc: p.description, img: p.img_url || "", img2: p.img_url2 || "", img3: p.img_url3 || "" }));
   showCatalogLoading(false);
   renderCatalog();
 }
