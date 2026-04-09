@@ -653,11 +653,8 @@ async function loadProducts() {
   }
 }
 
-
     showCatalogLoading(false);
     renderCatalog();
-}
-
 
 async function loadBanners() {
   const { data } = await sb.from("banners").select("*").eq("ativo", true).order("ordem");
