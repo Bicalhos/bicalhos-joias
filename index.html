@@ -622,10 +622,29 @@ async function loadAll() {
 
 async function loadProducts() {
     showCatalogLoading(true);
-    const { data, error } = await sb.from("produtos").select("*").order("created_at", { ascending: false });
-    
-    if (productsError) {
-    showToast("Erro ao carregar produtos: " + productsError.message);
+    id: 1,
+      name: "Aliança de Moeda Antiga 8mm",
+      material: "Moeda Antiga",
+      category: "Alianças",
+      price: 250,
+      stripe_url: "https://buy.stripe.com/5kQeV6e496UPgtGeAE1Z00",
+      desc: "Par de alianças artesanais com brilho eterno de ouro 18k.",
+      img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/alianca-8mm.jpg",
+      img2: "",
+      img3: ""
+    },
+    {
+      id: 2,
+      name: "Bracelete de Cobre Artesanal",
+      material: "Cobre Puro",
+      category: "Pulseiras",
+      price: 180,
+      stripe_url: "", // Deixe vazio se for apenas pelo WhatsApp
+      desc: "Bracelete rústico com propriedades terapêuticas e design exclusivo.",
+      img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/bracelete-cobre.jpg",
+      img2: "",
+      img3: ""
+    };
     showCatalogLoading(false);
     return;
   }
