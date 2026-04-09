@@ -622,17 +622,21 @@ async function loadAll() {
 
 async function loadProducts() {
     showCatalogLoading(true);
-    id: 1,
-      name: "Aliança de Moeda Antiga 8mm",
+    products = [
+    {
+      id: 1,
+      name: "Aliança 5mm Quadrada",
       material: "Moeda Antiga",
       category: "Alianças",
       price: 250,
-      stripe_url: "https://buy.stripe.com/5kQeV6e496UPgtGeAE1ZS00",
-      desc: "Par de alianças artesanais com brilho eterno de ouro 18k.",
+      stripe_url: "https://buy.stripe.com/5kQeV6e496UPgtGeAE1Z00",
+      desc: "Aliança artesanal com acabamento quadrado e brilho de ouro 18k.",
+      // LINK RAW CORRIGIDO ABAIXO:
       img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/5mm%20quadrado.jpeg",
-      img2: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/5mm%20quadrado.jpeg",
+      img_url: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/5mm%20quadrado.jpeg",
+      img2: "",
       img3: ""
-    },
+    }
     {
       id: 2,
       name: "Bracelete de Cobre Artesanal",
