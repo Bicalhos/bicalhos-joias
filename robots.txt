@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://bicalhosjoias.com.br/sitemap.xml
 
-google-site-verification=vfYGh6RmdzPldQt9XktTpKAbQfupjS3Fnn2CZitoBVI
+Sitemap: https://bicalhosjoias.com.br/sitemap.xml
