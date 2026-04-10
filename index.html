@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bicalhos Jóias — Joias Artesanais em São Paulo</title>
+<meta name="description" content="Bicalhos Jóias — Joias artesanais personalizadas em São Paulo."/>
+<link rel="canonical" href="https://bicalhosjoias.com.br/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--gold:#B8960C;--gold-light:#E8D48B;--gold-dark:#8A6E08;--cream:#FAF7F2;--dark:#1A1612;--mid:#4A3F35;--muted:#8C7B6E;--border:rgba(184,150,12,0.25);--white:#FFFFFF;--radius:4px;--shadow:0 4px 24px rgba(26,22,18,0.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",sans-serif;background:var(--cream);color:var(--dark);min-height:100vh}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(250,247,242,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo-wrap{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+.logo-img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--border);flex-shrink:0}
+.logo-text{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:600;color:var(--gold-dark);letter-spacing:0.04em}
+.logo-text span{font-style:italic;font-weight:300}
+nav{display:flex;gap:1.5rem;align-items:center}
+nav a{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s}
+nav a:hover{color:var(--gold)}
+
+/* HERO VIDEO */
+.hero{position:relative;overflow:hidden;background:var(--dark)}
+.hero-video-wrap{position:relative;width:100%;min-height:82vh;display:flex;align-items:center;justify-content:center}
+.hero-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;object-fit:cover;pointer-events:none}
+.hero-video-overlay{position:absolute;inset:0;background:rgba(26,22,18,0.52);z-index:1}
+.hero-video-content{position:relative;z-index:2;text-align:center;padding:4rem 2rem;max-width:640px;min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero-badge{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(232,212,139,0.4);padding:0.3rem 1rem;border-radius:20px;margin-bottom:1.4rem;display:inline-block}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.6rem,6vw,4.8rem);font-weight:300;line-height:1.15;color:#FAF7F2;margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero p{font-size:1rem;color:rgba(250,247,242,0.75);max-width:400px;margin:0 auto 2.2rem;line-height:1.7;font-weight:300}
+.btn-cta{background:var(--gold-dark);color:var(--cream);padding:0.8rem 2rem;border-radius:var(--radius);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;display:inline-block}
+.btn-cta:hover{background:var(--gold)}
+.hero-sound-btn{position:absolute;bottom:1.5rem;right:1.5rem;background:rgba(250,247,242,0.15);border:1px solid rgba(250,247,242,0.3);color:#FAF7F2;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;backdrop-filter:blur(4px);z-index:5}
+.hero-sound-btn:hover{background:rgba(250,247,242,0.3)}
+
+/* FILTER BAR */
+.filter-bar{padding:1.5rem 2rem;display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;justify-content:center;border-bottom:1px solid var(--border);background:var(--white)}
+.filter-btn{border:1px solid var(--border);background:transparent;color:var(--mid);padding:0.4rem 1rem;border-radius:20px;font-family:"Jost",sans-serif;font-size:0.78rem;letter-spacing:0.08em;cursor:pointer;transition:all 0.2s}
+.filter-btn:hover,.filter-btn.active{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
+
+/* CATALOG */
+.catalog-section{padding:3rem 2rem;max-width:1400px;margin:0 auto}
+.section-title{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:300;color:var(--dark);text-align:center;margin-bottom:0.4rem}
+.section-sub{text-align:center;color:var(--muted);font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2.5rem}
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem}
+.product-card{background:var(--white);border:1px solid var(--border);border-radius:2px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.product-img-wrap{position:relative;overflow:hidden;aspect-ratio:1;background:#F5EFE6}
+.product-img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;display:block}
+.product-card:hover .product-img{transform:scale(1.06)}
+.product-material{position:absolute;top:0.75rem;left:0.75rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(250,247,242,0.92);color:var(--gold-dark);padding:0.25rem 0.6rem;border-radius:2px}
+.product-info{padding:1.1rem 1.25rem 1.25rem}
+.product-name{font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:400;color:var(--dark);margin-bottom:0.3rem}
+.product-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-bottom:0.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.product-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.btn-link{font-size:0.75rem;color:var(--gold-dark);text-decoration:underline;text-underline-offset:2px}
+.btn-whatsapp{background:#25D366;color:white;border:none;padding:0.5rem 1rem;border-radius:var(--radius);font-family:"Jost",sans-serif;font-size:0.75rem;letter-spacing:0.06em;cursor:pointer;display:flex;align-items:center;gap:0.4rem;transition:background 0.2s;text-decoration:none}
+.btn-whatsapp:hover{background:#1EAF55}
+.btn-stripe{background:#635bff;color:white;border:none;padding:0.5rem 1rem;border-radius:var(--radius);font-family:"Jost",sans-serif;font-size:0.75rem;letter-spacing:0.06em;cursor:pointer;display:flex;align-items:center;gap:0.4rem;transition:background 0.2s;text-decoration:none}
+.btn-stripe:hover{background:#5851ea}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,0.5);text-align:center;padding:2rem;font-size:0.78rem;letter-spacing:0.08em;margin-top:4rem}
+footer a{color:var(--gold-light);text-decoration:none}
+footer strong{color:rgba(255,255,255,0.85);display:block;font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-weight:300;margin-bottom:0.5rem}
+
+/* PRODUCT MODAL */
+.product-modal-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(26,22,18,0.65);align-items:center;justify-content:center;padding:1rem}
+.product-modal-overlay.open{display:flex}
+.product-modal{background:var(--cream);max-width:640px;width:100%;border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+@media(min-width:600px){.product-modal{flex-direction:row}}
+.modal-img-side{flex:1;background:#F0E8D4;min-height:260px;position:relative;overflow:hidden}
+.modal-img-side img{width:100%;height:100%;object-fit:cover;display:block}
+.modal-info-side{flex:1;padding:2rem;display:flex;flex-direction:column}
+.modal-material{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.modal-name{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:300;line-height:1.2;color:var(--dark);margin-bottom:0.75rem}
+.modal-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;flex:1;margin-bottom:1.5rem}
+.modal-actions{display:flex;flex-direction:column;gap:0.75rem}
+.modal-close{position:absolute;top:1rem;right:1rem;background:rgba(250,247,242,0.85);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:10}
+.btn-modal{display:flex;justify-content:center;align-items:center;gap:0.5rem;padding:0.75rem;border-radius:var(--radius);text-decoration:none;color:white;font-size:0.85rem;font-weight:500;transition:opacity 0.2s}
+.btn-modal:hover{opacity:0.9}
+
+/* CHAT FLOAT */
+.chat-float{position:fixed;bottom:2rem;right:2rem;z-index:200}
+.btn-chat{width:56px;height:56px;background:#25D366;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s}
+.btn-chat:hover{transform:scale(1.08)}
+
+/* TOAST */
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--dark);color:var(--gold-light);padding:0.7rem 1.5rem;border-radius:20px;font-size:0.82rem;z-index:9999;transition:transform 0.3s;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+@media(max-width:640px){nav a:not(.btn-admin){display:none}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo-wrap" id="logo-link">
+    <!-- SUBSTITUA O src ABAIXO PELA SUA LOGO BASE64 OU URL -->
+    <img id="logo-header" src="https://via.placeholder.com/46" alt="Bicalhos Jóias" class="logo-img"/>
+    <span class="logo-text">Bicalhos <span>Jóias</span></span>
+  </a>
+  <nav>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+</header>
+
+<!-- HERO VIDEO -->
+<section class="hero" id="hero">
+  <div class="hero-video-wrap">
+    <iframe id="hero-yt" src="https://www.youtube.com/embed/tzL96OgJJ0Y?autoplay=1&mute=1&loop=1&playlist=tzL96OgJJ0Y&controls=0&modestbranding=1&playsinline=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-video-content">
+      <span class="hero-badge">Feito à mão · Personalizado para você</span>
+      <h1>Você imagina, <em>nós criamos</em></h1>
+      <p>Joias personalizadas em todos os metais — ouro, prata, cobre, latão e alpaca.</p>
+      <a href="#catalogo" class="btn-cta">Ver Catálogo</a>
+    </div>
+    <button class="hero-sound-btn" id="hero-sound-btn" onclick="toggleHeroSound()" title="Ativar/desativar som">🔇</button>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="filter-bar"></div>
+
+<!-- CATALOG -->
+<section class="catalog-section" id="catalogo">
+  <p class="section-title">Coleção</p>
+  <p class="section-sub">Peças artesanais disponíveis</p>
+  <div class="catalog-grid" id="catalog-grid"></div>
+  <div class="empty-state" id="empty-state" style="display:none">
+    <p>Nenhuma peça encontrada nesta categoria.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="sobre">
+  <strong>Bicalhos Jóias</strong>
+  <div style="margin-bottom:0.75rem">
+    <a href="termos-de-uso.html">Termos de Uso</a> &nbsp;·&nbsp;
+    <a href="privacidade.html">Privacidade</a>
+  </div>
+  São Paulo — SP &nbsp;·&nbsp; (011) 93002-6051
+</footer>
+
+<!-- CHAT FLOAT -->
+<div class="chat-float">
+  <button class="btn-chat" onclick="window.open('https://wa.me/5511930026051?text=Olá! Gostaria de saber mais sobre as joias.', '_blank')">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>
+  </button>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div class="product-modal-overlay" id="product-modal" onclick="if(event.target===this)closeProductModal()">
+  <div class="product-modal">
+    <div class="modal-img-side" id="modal-img-side">
+      <button class="modal-close" onclick="closeProductModal()">×</button>
+    </div>
+    <div class="modal-info-side">
+      <p class="modal-material" id="modal-material"></p>
+      <h2 class="modal-name" id="modal-name"></h2>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-actions" id="modal-actions"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ======================================================================
+// CATÁLOGO DINÂMICO LOCAL
+// Edite os produtos diretamente aqui! Sem Supabase.
+// ======================================================================
+const catalogData = [
+  {
+    id: "1",
+    name: "Colar Lua Crescente",
+    material: "Prata 925",
+    descricao: "Colar artesanal com pingente de lua crescente, feito à mão em São Paulo. Acabamento polido e brilhante.",
+    urlPreco: "https://seusite.com/precos/colar-lua", // Link externo de preço (opcional)
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Colar Lua Crescente",
+    stripeUrl: "https://buy.stripe.com/seu_link_stripe_aqui", // Link de pagamento Stripe (opcional)
+    img: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: "2",
+    name: "Aliança Moeda Antiga",
+    material: "Cobre e Latão",
+    descricao: "Aliança forjada a partir de moedas antigas, contando histórias através do metal.",
+    urlPreco: "", // Deixe vazio se não tiver
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre a Aliança Moeda",
+    stripeUrl: "https://buy.stripe.com/outro_link",
+    img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    id: "3",
+    name: "Anel Solitário Personalizado",
+    material: "Ouro 18k",
+    descricao: "Anel solitário com pedra可选，设计优美。", // Exemplo com descrição
+    urlPreco: "https://seusite.com/precos/anel-solitario",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Anel Solitário",
+    stripeUrl: "",
+    img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=500&q=60"
+  }
+];
+
+let currentFilter = "todos";
+
+// ========== RENDER FILTER BAR ==========
+function renderFilterBar() {
+  const bar = document.getElementById("filter-bar");
+  // Pega categorias únicas dos produtos
+  const categories = [...new Set(catalogData.map(p => p.material).filter(Boolean))];
+  
+  let html = '<button class="filter-btn active" onclick="filterProducts(event, \'todos\')">Todos</button>';
+  categories.forEach(cat => {
+    html += `<button class="filter-btn" onclick="filterProducts(event, '${cat}')">${cat}</button>`;
+  });
+  bar.innerHTML = html;
+}
+
+// ========== RENDER CATALOG ==========
+function renderCatalog() {
+  const grid = document.getElementById("catalog-grid");
+  const empty = document.getElementById("empty-state");
+  
+  const filtered = currentFilter === "todos" 
+    ? catalogData 
+    : catalogData.filter(p => p.material === currentFilter);
+
+  if (!filtered.length) { 
+    grid.innerHTML = ""; 
+    empty.style.display = "block"; 
+    return; 
+  }
+  
+  empty.style.display = "none";
+  
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card" onclick="openProduct('${p.id}')">
+      <div class="product-img-wrap">
+        ${p.img ? `<img class="product-img" src="${p.img}" alt="${escHtml(p.name)}">` : ""}
+        ${p.material ? `<span class="product-material">${escHtml(p.material)}</span>` : ""}
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">${escHtml(p.name)}</h3>
+        <p class="product-desc">${escHtml(p.descricao || "")}</p>
+        <div class="product-footer">
+          ${p.urlPreco ? `<a href="${p.urlPreco}" target="_blank" class="btn-link" onclick="event.stopPropagation()">Ver Preço</a>` : ""}
+          <a class="btn-whatsapp" href="${p.whatsapp}" target="_blank" onclick="event.stopPropagation()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>
+            Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function filterProducts(e, filter) {
+  currentFilter = filter;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  e.target.classList.add("active");
+  renderCatalog();
+}
+
+// ========== PRODUCT MODAL ==========
+function openProduct(id) {
+  const p = catalogData.find(x => x.id === id);
+  if (!p) return;
+
+  document.getElementById("modal-material").textContent = p.material || "";
+  document.getElementById("modal-name").textContent = p.name;
+  document.getElementById("modal-desc").textContent = p.descricao || "";
+  
+  const actionsDiv = document.getElementById("modal-actions");
+  actionsDiv.innerHTML = "";
+  
+  if (p.whatsapp) {
+    actionsDiv.innerHTML += `<a href="${p.whatsapp}" target="_blank" class="btn-modal" style="background:#25D366">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>
+      Comprar via WhatsApp
+    </a>`;
+  }
+  
+  if (p.stripeUrl) {
+    actionsDiv.innerHTML += `<a href="${p.stripeUrl}" target="_blank" class="btn-modal" style="background:#635bff">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-7.076-2.304l-.917 5.698C5.018 23.025 7.59 24 11.281 24c2.642 0 4.8-.635 6.345-1.856 1.655-1.305 2.514-3.227 2.514-5.784 0-4.131-2.521-5.858-6.164-7.205z"/></svg>
+      Pagar com Stripe
+    </a>`;
+  }
+
+  if (p.urlPreco) {
+    actionsDiv.innerHTML += `<a href="${p.urlPreco}" target="_blank" class="btn-modal" style="background:transparent; color:var(--gold-dark); border:1px solid var(--gold-dark)">
+      Ver Tabela de Preços
+    </a>`;
+  }
+
+  // Image handling
+  const side = document.getElementById("modal-img-side");
+  const oldImg = side.querySelector("img");
+  if (oldImg) oldImg.remove();
+  
+  if (p.img) {
+    const imgEl = document.createElement("img");
+    imgEl.src = p.img;
+    side.insertBefore(imgEl, side.firstChild);
+  }
+
+  document.getElementById("product-modal").classList.add("open");
+}
+
+function closeProductModal() { 
+  document.getElementById("product-modal").classList.remove("open"); 
+}
+
+// ========== HERO VIDEO SOUND ==========
+let heroMuted = true;
+function toggleHeroSound() {
+  heroMuted = !heroMuted;
+  const iframe = document.getElementById("hero-yt");
+  const btn = document.getElementById("hero-sound-btn");
+  iframe.src = `https://www.youtube.com/embed/tzL96OgJJ0Y?autoplay=1&mute=${heroMuted ? "1" : "0"}&loop=1&playlist=tzL96OgJJ0Y&controls=0&modestbranding=1&playsinline=1&rel=0`;
+  btn.textContent = heroMuted ? "🔇" : "🔊";
+}
+
+// ========== UTILS ==========
+function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function showToast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2800); }
+
+// ========== INIT ==========
+renderFilterBar();
+renderCatalog();
+</script>
+</body>
+</html>
