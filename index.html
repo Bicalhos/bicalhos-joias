@@ -226,14 +226,42 @@ let currentFilter = "todos";
 // ========== RENDER FILTER BAR ==========
 function renderFilterBar() {
   const bar = document.getElementById("filter-bar");
-  // Pega categorias únicas dos produtos
+  const navDropdown = document.getElementById("nav-dropdown-content");
   const categories = [...new Set(catalogData.map(p => p.material).filter(Boolean))];
   
+  // 1. Preenche a barra de filtros principal (embaixo do vídeo)
   let html = '<button class="filter-btn active" onclick="filterProducts(event, \'todos\')">Todos</button>';
   categories.forEach(cat => {
     html += `<button class="filter-btn" onclick="filterProducts(event, '${cat}')">${cat}</button>`;
   });
   bar.innerHTML = html;
+
+  // 2. Preenche o Dropdown do Menu Superior
+  let dropHtml = '<a href="#" onclick="filterFromNav(event, \'todos\')">Todos</a>';
+  categories.forEach(cat => {
+    dropHtml += `<a href="#" onclick="filterFromNav(event, '${cat}')">${cat}</a>`;
+  });
+  navDropdown.innerHTML = dropHtml;
+}
+
+// Função nova para quando clicar no menu superior
+function filterFromNav(e, filter) {
+  e.preventDefault(); // Evita que a página pule pro topo
+  currentFilter = filter;
+  
+  // Atualiza os botões ativos na barra de filtro principal
+  document.querySelectorAll(".filter-btn").forEach(b => {
+    b.classList.remove("active");
+    if(b.textContent === filter || (filter === 'todos' && b.textContent === 'Todos')) b.classList.add("active");
+  });
+  
+  renderCatalog();
+  
+  // Rola suavemente para o catálogo
+  document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+  
+  // Fecha o dropdown no celular se estiver aberto
+  document.querySelector('.nav-dropdown').classList.remove('active');
 }
 
 // ========== RENDER CATALOG ==========
@@ -346,6 +374,14 @@ function toggleHeroSound() {
 // ========== UTILS ==========
 function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 function showToast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2800); }
+  // Mobile dropdown toggle
+const dropdownBtn = document.querySelector('.dropbtn');
+if(dropdownBtn){
+  dropdownBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    this.parentElement.classList.toggle('active');
+  });
+}
 
 // ========== INIT ==========
 renderFilterBar();
