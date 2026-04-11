@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Pedido — Bicalhos Joias</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#FFF9EB', 100: '#FFF0C7', 200: '#FFE08A',
+                            300: '#FFCB4D', 400: '#FFB620', 500: '#F5A623',
+                            600: '#D4890A', 700: '#B06A08', 800: '#8F550D', 900: '#75460F',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #e5e5e5; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        @keyframes drawCheck { from { stroke-dashoffset: 50; } to { stroke-dashoffset: 0; } }
+        @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+        @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(2.2); opacity: 0; } }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+        @keyframes confetti-fall { 0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
+
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
+        .animate-scale-in { animation: scaleIn 0.6s ease-out forwards; opacity: 0; }
+
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+        .delay-900 { animation-delay: 0.9s; }
+        .delay-1000 { animation-delay: 1.0s; }
+        .delay-1200 { animation-delay: 1.2s; }
+        .delay-1400 { animation-delay: 1.4s; }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #FFB620 0%, #FFE08A 25%, #FFB620 50%, #FFE08A 75%, #FFB620 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .gold-border-gradient {
+            border: 1px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        .gold-border-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(245,166,35,0.5), rgba(245,166,35,0.1), rgba(245,166,35,0.3));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .timeline-line { background: linear-gradient(to bottom, rgba(245,166,35,0.6), rgba(245,166,35,0.1)); }
+
+        .preloader {
+            position: fixed; inset: 0; background: #050505; z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+        }
+        .preloader.hidden { opacity: 0; visibility: hidden; }
+        .preloader-logo { animation: float 2s ease-in-out infinite; }
+
+        .confetti-piece { position: fixed; width: 6px; height: 6px; border-radius: 1px; pointer-events: none; z-index: 100; }
+
+        @media print {
+            body { background: white; color: #1a1a1a; }
+            .no-print { display: none !important; }
+            .print-white { background: white !important; border-color: #ddd !important; }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: rgba(245,166,35,0.3); border-radius: 3px; }
+
+        /* Tela de erro quando não há parâmetros */
+        .error-screen { display: none; }
+        .error-screen.visible { display: flex; }
+        .main-content.hidden { display: none; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo text-center">
+            <div class="text-gold-400 mb-3">
+                <i data-lucide="gem" class="w-8 h-8 mx-auto"></i>
+            </div>
+            <p class="text-gold-500 font-serif text-xl tracking-wider">Bicalhos Joias</p>
+            <div class="mt-4 flex items-center justify-center gap-1">
+                <div class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" style="animation-delay:0.2s"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" style="animation-delay:0.4s"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti -->
+    <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div>
+
+    <!-- ==================== TELA DE ERRO ==================== -->
+    <div class="error-screen" id="error-screen">
+        <div class="min-h-screen flex items-center justify-center px-6">
+            <div class="text-center max-w-md">
+                <div class="w-16 h-16 rounded-full bg-neutral-800 border border-white/10 flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="alert-circle" class="w-7 h-7 text-neutral-500"></i>
+                </div>
+                <h1 class="font-serif text-2xl text-white mb-3">Página não encontrada</h1>
+                <p class="text-neutral-500 text-sm font-light leading-relaxed mb-8">
+                    Esta página só é acessível após a conclusão de um pedido. Se você acabou de fazer uma compra, aguarde alguns instantes e tente novamente.
+                </p>
+                <a href="/" class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-black text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-full transition-colors duration-300">
+                    <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                    Voltar à loja
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <div class="main-content hidden" id="main-content">
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-40 no-print">
+            <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+                <a href="/" class="flex items-center gap-2 group">
+                    <i data-lucide="gem" class="w-5 h-5 text-gold-500 transition-transform duration-500 group-hover:rotate-12"></i>
+                    <span class="font-serif text-lg text-white tracking-wide">Bicalhos Joias</span>
+                </a>
+                <button onclick="window.print()" class="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-neutral-400 hover:text-gold-500 transition-colors duration-300 border border-white/10 rounded-full px-4 py-2 hover:border-gold-500/30">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                    Imprimir
+                </button>
+            </div>
+        </header>
+
+        <main class="relative">
+
+            <!-- Background Glow -->
+            <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gold-500/5 blur-[150px] rounded-full pointer-events-none"></div>
+            <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-gold-500/3 blur-[120px] rounded-full pointer-events-none"></div>
+
+            <!-- Confirmação -->
+            <section class="min-h-screen flex items-center justify-center px-6 pt-20 pb-16">
+                <div class="max-w-2xl w-full">
+
+                    <!-- Sucesso -->
+                    <div class="text-center mb-8 animate-scale-in delay-300">
+                        <div class="relative inline-flex items-center justify-center">
+                            <div class="absolute w-24 h-24 rounded-full border border-gold-500/30" style="animation: pulse-ring 2s ease-out infinite;"></div>
+                            <div class="absolute w-32 h-32 rounded-full border border-gold-500/15" style="animation: pulse-ring 2s ease-out infinite 0.5s;"></div>
+                            <div class="relative w-20 h-20 rounded-full bg-gradient-to-br from-gold-500/20 to-gold-700/20 border border-gold-500/40 flex items-center justify-center backdrop-blur-sm">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 13l4 4L19 7" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50" style="animation: drawCheck 0.8s ease-out 1.0s forwards;"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Título -->
+                    <div class="text-center mb-10 animate-fade-in-up delay-400">
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-500 mb-4">Pedido Confirmado</p>
+                        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.1] mb-4">
+                            <span class="shimmer-text">Obrigada</span>
+                        </h1>
+                        <p class="text-neutral-400 text-lg font-light leading-relaxed max-w-md mx-auto">
+                            Sua joia especial está a caminho. Cada peça é criada com dedicação exclusiva para você.
+                        </p>
+                    </div>
+
+                    <!-- Card Pedido -->
+                    <div class="gold-border-gradient rounded-2xl bg-neutral-900/60 backdrop-blur-md p-6 md:p-8 mb-6 animate-fade-in-up delay-600 print-white">
+                        <div class="flex items-center justify-between mb-6 pb-6 border-b border-white/5">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-1">Número do Pedido</p>
+                                <p class="text-white font-medium text-lg tracking-wide" id="order-number">—</p>
+                            </div>
+                            <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1.5">
+                                <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                                <span class="text-emerald-400 text-xs font-medium">Pago</span>
+                            </div>
+                        </div>
+
+                        <!-- Itens (preenchido via JS) -->
+                        <div class="space-y-4" id="items-container">
+                            <div class="text-neutral-500 text-sm text-center py-4">Carregando...</div>
+                        </div>
+
+                        <!-- Totais -->
+                        <div class="border-t border-white/5 pt-4 mt-4" id="totals-container" style="display:none;">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-neutral-500 text-xs">Subtotal</span>
+                                <span class="text-neutral-300 text-xs" id="subtotal-value">—</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-neutral-500 text-xs">Frete seguro</span>
+                                <span class="text-xs font-medium" id="shipping-value">—</span>
+                            </div>
+                            <div class="flex justify-between items-center mt-3 pt-3 border-t border-white/5">
+                                <span class="text-white text-sm font-medium">Total</span>
+                                <span class="text-gold-400 text-lg font-serif font-medium" id="total-value">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stripe Badge -->
+                    <div class="gold-border-gradient rounded-xl bg-neutral-900/40 backdrop-blur-md p-4 mb-6 animate-fade-in-up delay-700 print-white">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-[#635BFF]/10 border border-[#635BFF]/20 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2 9.5C2 6.46 2 4.94 2.93 3.97C3.86 3 5.28 3 8.12 3H15.88C18.72 3 20.14 3 21.07 3.97C22 4.94 22 6.46 22 9.5V14.5C22 17.54 22 19.06 21.07 20.03C20.14 21 18.72 21 15.88 21H8.12C5.28 21 3.86 21 2.93 20.03C2 19.06 2 17.54 2 14.5V9.5Z" stroke="#635BFF" stroke-width="1.5"/>
+                                    <path d="M8 12L10.5 10L13 12L16 9" stroke="#635BFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-white text-sm font-medium">Pagamento seguro via Stripe</p>
+                                <p class="text-neutral-500 text-xs mt-0.5" id="stripe-info">Transação confirmada</p>
+                            </div>
+                            <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400/60 flex-shrink-0"></i>
+                        </div>
+                    </div>
+
+                    <!-- Dados Cliente e Envio -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 animate-fade-in-up delay-800 print-white">
+                        <div class="gold-border-gradient rounded-xl bg-neutral-900/40 backdrop-blur-md p-5">
+                            <div class="flex items-center gap-2 mb-3">
+                                <i data-lucide="user" class="w-4 h-4 text-gold-500/70"></i>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500">Cliente</p>
+                            </div>
+                            <p class="text-white text-sm font-medium" id="customer-name">—</p>
+                            <p class="text-neutral-500 text-xs mt-1" id="customer-email">—</p>
+                            <p class="text-neutral-500 text-xs" id="customer-phone">—</p>
+                        </div>
+                        <div class="gold-border-gradient rounded-xl bg-neutral-900/40 backdrop-blur-md p-5">
+                            <div class="flex items-center gap-2 mb-3">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-gold-500/70"></i>
+                                <p class="text-[10px] font-semibold uppercase tracking-wider text-neutral-500">Entrega</p>
+                            </div>
+                            <p class="text-white text-sm font-medium" id="address-line">—</p>
+                            <p class="text-neutral-500 text-xs mt-1" id="address-details">—</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Timeline -->
+            <section class="px-6 pb-24">
+                <div class="max-w-2xl mx-auto">
+                    <div class="text-center mb-12 animate-fade-in-up delay-900">
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-500 mb-3">Acompanhe seu pedido</p>
+                        <h2 class="font-serif text-3xl md:text-4xl tracking-tight text-white">Produção & Envio</h2>
+                        <p class="text-neutral-400 text-sm font-light mt-3 max-w-md mx-auto leading-relaxed">
+                            Cada joia Bicalhos passa por um processo artesanal de criação. Acompanhe cada etapa abaixo.
+                        </p>
+                    </div>
+
+                    <div class="relative animate-fade-in-up delay-1000">
+                        <div class="absolute left-6 md:left-7 top-0 bottom-0 w-px timeline-line"></div>
+
+                        <!-- Etapa 1 -->
+                        <div class="relative flex gap-5 md:gap-6 pb-12">
+                            <div class="relative z-10 flex-shrink-0">
+                                <div class="w-12 md:w-14 h-12 md:h-14 rounded-full bg-gold-500/20 border-2 border-gold-500 flex items-center justify-center">
+                                    <i data-lucide="check" class="w-5 h-5 text-gold-400"></i>
+                                </div>
+                            </div>
+                            <div class="pt-1 md:pt-2">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <h3 class="text-white font-medium text-base">Pedido Confirmado</h3>
+                                    <span class="text-[10px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">Concluído</span>
+                                </div>
+                                <p class="text-neutral-500 text-xs mb-2" id="step1-date">—</p>
+                                <p class="text-neutral-400 text-sm font-light leading-relaxed">Seu pagamento foi aprovado e o pedido foi registrado em nosso sistema com sucesso.</p>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 2 -->
+                        <div class="relative flex gap-5 md:gap-6 pb-12">
+                            <div class="relative z-10 flex-shrink-0">
+                                <div class="w-12 md:w-14 h-12 md:h-14 rounded-full bg-gold-500/10 border-2 border-gold-500/40 flex items-center justify-center">
+                                    <i data-lucide="hammer" class="w-5 h-5 text-gold-400/70"></i>
+                                </div>
+                                <div class="absolute -top-0.5 -right-0.5 w-4 h-4">
+                                    <span class="absolute inset-0 rounded-full bg-gold-500 animate-ping opacity-40"></span>
+                                    <span class="relative block w-4 h-4 rounded-full bg-gold-500 border-2 border-[#050505]"></span>
+                                </div>
+                            </div>
+                            <div class="pt-1 md:pt-2">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <h3 class="text-white font-medium text-base">Em Produção</h3>
+                                    <span class="text-[10px] font-semibold uppercase tracking-wider text-gold-400 bg-gold-400/10 px-2 py-0.5 rounded-full">Em andamento</span>
+                                </div>
+                                <p class="text-neutral-500 text-xs mb-2">Previsão: 3 a 7 dias úteis</p>
+                                <p class="text-neutral-400 text-sm font-light leading-relaxed">Nossos artesãos estão criando sua joia com todo cuidado. Cada detalhe é trabalhado manualmente para garantir perfeição.</p>
+                                <div class="mt-3 w-full max-w-xs h-1 bg-neutral-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 3 -->
+                        <div class="relative flex gap-5 md:gap-6 pb-12">
+                            <div class="relative z-10 flex-shrink-0">
+                                <div class="w-12 md:w-14 h-12 md:h-14 rounded-full bg-neutral-800/80 border border-white/10 flex items-center justify-center">
+                                    <i data-lucide="scan-search" class="w-5 h-5 text-neutral-600"></i>
+                                </div>
+                            </div>
+                            <div class="pt-1 md:pt-2">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <h3 class="text-neutral-500 font-medium text-base">Controle de Qualidade</h3>
+                                    <span class="text-[10px] font-semibold uppercase tracking-wider text-neutral-600 bg-neutral-800 px-2 py-0.5 rounded-full">Aguardando</span>
+                                </div>
+                                <p class="text-neutral-600 text-xs mb-2">1 a 2 dias úteis</p>
+                                <p class="text-neutral-500 text-sm font-light leading-relaxed">Inspeção minuciosa de acabamento, peso, medida e brilho. Somente peças perfeitas seguem em frente.</p>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 4 -->
+                        <div class="relative flex gap-5 md:gap-6 pb-12">
+                            <div class="relative z-10 flex-shrink-0">
+                                <div class="w-12 md:w-14 h-12 md:h-14 rounded-full bg-neutral-800/80 border border-white/10 flex items-center justify-center">
+                                    <i data-lucide="gift" class="w-5 h-5 text-neutral-600"></i>
+                                </div>
+                            </div>
+                            <div class="pt-1 md:pt-2">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <h3 class="text-neutral-500 font-medium text-base">Embalagem Premium</h3>
+                                    <span class="text-[10px] font-semibold uppercase tracking-wider text-neutral-600 bg-neutral-800 px-2 py-0.5 rounded-full">Aguardando</span>
+                                </div>
+                                <p class="text-neutral-600 text-xs mb-2">Mesmo dia</p>
+                                <p class="text-neutral-500 text-sm font-light leading-relaxed">Sua joia será embalada em nosso estojo premium Bicalhos, com certificado de autenticidade e nota fiscal.</p>
+                            </div>
+                        </div>
+
+                        <!-- Etapa 5 -->
+                        <div class="relative flex gap-5 md:gap-6">
+                            <div class="relative z-10 flex-shrink-0">
+                                <div class="w-12 md:w-14 h-12 md:h-14 rounded-full bg-neutral-800/80 border border-white/10 flex items-center justify-center">
+                                    <i data-lucide="truck" class="w-5 h-5 text-neutral-600"></i>
+                                </div>
+                            </div>
+                            <div class="pt-1 md:pt-2">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <h3 class="text-neutral-500 font-medium text-base">Envio & Entrega</h3>
+                                    <span class="text-[10px] font-semibold uppercase tracking-wider text-neutral-600 bg-neutral-800 px-2 py-0.5 rounded-full">Aguardando</span>
+                                </div>
+                                <p class="text-neutral-600 text-xs mb-2">2 a 5 dias úteis (após envio)</p>
+                                <p class="text-neutral-500 text-sm font-light leading-relaxed">Envio seguro com rastreio em tempo real. Você receberá o código de rastreamento por e-mail e SMS assim que a joia for despachada.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previsão Entrega -->
+                    <div class="mt-14 gold-border-gradient rounded-2xl bg-neutral-900/40 backdrop-blur-md p-6 text-center animate-fade-in-up delay-1200 print-white">
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-gold-500/70"></i>
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500">Previsão de Entrega</p>
+                        </div>
+                        <p class="font-serif text-2xl text-white mb-1" id="delivery-date">—</p>
+                        <p class="text-neutral-500 text-xs">Prazo estimado sujeito a confirmação após produção</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info -->
+            <section class="px-6 pb-20">
+                <div class="max-w-2xl mx-auto animate-fade-in-up delay-1400">
+                    <div class="gold-border-gradient rounded-2xl bg-neutral-900/30 backdrop-blur-md p-6 md:p-8 print-white">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="info" class="w-4 h-4 text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white text-sm font-medium mb-2">Informações Importantes</h3>
+                                <ul class="space-y-2 text-neutral-400 text-xs font-light leading-relaxed">
+                                    <li class="flex items-start gap-2"><span class="text-gold-500/50 mt-1">·</span>Você receberá atualizações por e-mail a cada mudança de status do pedido.</li>
+                                    <li class="flex items-start gap-2"><span class="text-gold-500/50 mt-1">·</span>O rastreamento será enviado automaticamente quando a joia for despachada.</li>
+                                    <li class="flex items-start gap-2"><span class="text-gold-500/50 mt-1">·</span>Todas as peças Bicalhos possuem <span class="text-gold-400">garantia de 1 ano</span> contra defeitos de fabricação.</li>
+                                    <li class="flex items-start gap-2"><span class="text-gold-500/50 mt-1">·</span>Em caso de dúvidas, entre em contato pelo WhatsApp ou e-mail abaixo.</li>
+                                    <li class="flex items-start gap-2"><span class="text-gold-500/50 mt-1">·</span>Salve esta página ou imprima para futura referência do seu pedido.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="border-t border-white/5 px-6 py-12">
+                <div class="max-w-2xl mx-auto text-center">
+                    <div class="flex items-center justify-center gap-2 mb-6">
+                        <i data-lucide="gem" class="w-4 h-4 text-gold-500"></i>
+                        <span class="font-serif text-base text-white tracking-wide">Bicalhos Joias</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-6 mb-6 flex-wrap">
+                        <a href="#" class="flex items-center gap-2 text-neutral-500 hover:text-gold-500 transition-colors duration-300 text-xs">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>WhatsApp
+                        </a>
+                        <a href="#" class="flex items-center gap-2 text-neutral-500 hover:text-gold-500 transition-colors duration-300 text-xs">
+                            <i data-lucide="mail" class="w-3.5 h-3.5"></i>contato@bicalhosjoias.com.br
+                        </a>
+                        <a href="#" class="flex items-center gap-2 text-neutral-500 hover:text-gold-500 transition-colors duration-300 text-xs">
+                            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>@bicalhosjoias
+                        </a>
+                    </div>
+                    <p class="text-neutral-600 text-[11px] font-light">© 2025 Bicalhos Joias. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // ============================================================
+        // LER PARÂMETROS DA URL E PREENCHER A PÁGINA
+        // ============================================================
+        const params = new URLSearchParams(window.location.search);
+
+        // Verificar se tem dados mínimos
+        const hasData = params.has('pedido') || params.has('total');
+
+        if (!hasData) {
+            // Sem dados = mostrar tela de erro
+            document.getElementById('error-screen').classList.add('visible');
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('preloader').classList.add('hidden');
+        } else {
+            // Tem dados = mostrar página de confirmação
+            document.getElementById('error-screen').classList.remove('visible');
+            document.getElementById('main-content').classList.remove('hidden');
+
+            // Datas
+            const now = new Date();
+            const formatDateTime = (d) => d.toLocaleDateString('pt-BR', {
+                day: '2-digit', month: '2-digit', year: 'numeric',
+                hour: '2-digit', minute: '2-digit'
+            });
+
+            // Número do pedido
+            const pedido = params.get('pedido') || ('BCJ-' + now.getFullYear() + '-' + String(Math.floor(Math.random() * 9000) + 1000));
+            document.getElementById('order-number').textContent = '#' + pedido;
+
+            // Stripe info
+            document.getElementById('stripe-info').textContent =
+                'Transação confirmada em ' + now.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+            // Data etapa 1
+            document.getElementById('step1-date').textContent = formatDateTime(now);
+
+            // Cliente
+            document.getElementById('customer-name').textContent = params.get('nome') || '—';
+            document.getElementById('customer-email').textContent = params.get('email') || '—';
+            document.getElementById('customer-phone').textContent = params.get('telefone') || '—';
+
+            // Endereço
+            document.getElementById('address-line').textContent = params.get('endereco') || '—';
+            document.getElementById('address-details').textContent = params.get('cidade') || '—';
+
+            // Itens
+            let items = [];
+            try {
+                items = JSON.parse(params.get('items') || '[]');
+            } catch (e) {
+                items = [];
+            }
+
+            const itemsContainer = document.getElementById('items-container');
+            const totalsContainer = document.getElementById('totals-container');
+
+            if (items.length > 0) {
+                itemsContainer.innerHTML = items.map(item => `
+                    <div class="flex items-center gap-4">
+                        ${item.imagem ? `
+                        <div class="w-16 h-16 rounded-xl bg-neutral-800/80 border border-white/5 flex-shrink-0 overflow-hidden">
+                            <img src="${item.imagem}" alt="${item.nome}" class="w-full h-full object-cover rounded-xl"/>
+                        </div>` : ''}
+                        <div class="flex-1 min-w-0">
+                            <p class="text-white text-sm font-medium truncate">${item.nome}</p>
+                            <p class="text-neutral-500 text-xs mt-0.5">${item.descricao || ''}${item.qtd > 1 ? ' · Qtd: ' + item.qtd : ''}</p>
+                        </div>
+                        <p class="text-white text-sm font-medium flex-shrink-0">R$ ${Number(item.preco).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</p>
+                    </div>
+                `).join('');
+            } else {
+                // Fallback: mostrar total direto se não há itens
+                itemsContainer.innerHTML = '<p class="text-neutral-400 text-sm text-center py-2">Pagamento processado com sucesso.</p>';
+            }
+
+            // Totais
+            const total = Number(params.get('total')) || 0;
+            const frete = Number(params.get('frete')) || 0;
+            const subtotal = total - frete;
+
+            document.getElementById('subtotal-value').textContent = 'R$ ' + subtotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+
+            const shippingEl = document.getElementById('shipping-value');
+            if (frete === 0) {
+                shippingEl.textContent = 'Grátis';
+                shippingEl.classList.add('text-emerald-400');
+            } else {
+                shippingEl.textContent = 'R$ ' + frete.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+                shippingEl.classList.add('text-neutral-300');
+            }
+
+            document.getElementById('total-value').textContent = 'R$ ' + total.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+            totalsContainer.style.display = 'block';
+
+            // Previsão de entrega
+            function addBusinessDays(date, days) {
+                const result = new Date(date);
+                let count = 0;
+                while (count < days) {
+                    result.setDate(result.getDate() + 1);
+                    if (result.getDay() !== 0 && result.getDay() !== 6) count++;
+                }
+                return result;
+            }
+            const deliveryMin = addBusinessDays(now, 7);
+            const deliveryMax = addBusinessDays(now, 15);
+            document.getElementById('delivery-date').textContent =
+                deliveryMin.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long' }) + ' a ' +
+                deliveryMax.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+            // Preloader + Confetti
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    document.getElementById('preloader').classList.add('hidden');
+                    setTimeout(launchConfetti, 400);
+                }, 1800);
+            });
+        }
+
+        // Confetti
+        function launchConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#F5A623', '#FFB620', '#FFE08A', '#D4890A', '#ffffff', '#8F550D'];
+            for (let i = 0; i < 40; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + 'vw';
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.width = (Math.random() * 6 + 3) + 'px';
+                piece.style.height = (Math.random() * 6 + 3) + 'px';
+                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '1px';
+                piece.style.animation = 'confetti-fall ' + (Math.random() * 3 + 2.5) + 's ease-out ' + (Math.random() * 0.8) + 's forwards';
+                piece.style.opacity = Math.random() * 0.6 + 0.4;
+                container.appendChild(piece);
+            }
+            setTimeout(() => { container.innerHTML = ''; }, 5000);
+        }
+    </script>
+</body>
+</html>
