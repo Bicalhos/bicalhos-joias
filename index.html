@@ -222,56 +222,92 @@ footer strong{color:rgba(255,255,255,0.85);display:block;font-family:"Cormorant 
 // Edite os produtos diretamente aqui! Sem Supabase.
 // ======================================================================
 const catalogData = [
-  {
-    id: "1",
-    name: "Par de alianças de cobre",
-    material: "Cobre",
-    descricao: "O Beneficio do uso do cobre , em forma de joias para a saude.Atelie mo capão redondo e campo limpo. Acabamento polido e brilhante.",
-    preco: "R$ 90,00", // 
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA DE COBRE",
-    stripeUrl: "https://buy.stripe.com/7sY00cd05gvpa5i9gk1ZS01", // Link de pagamento Stripe (opcional)
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alianca-cobre-terapeutica.jpg"
-  },
-  {
-    id: "4",
-    name: "Cruz trançada em moedas antigas",
-    material: "Moedas Antigas",
-    descricao: "Cruz Trançada em moedas antigas.Feito a mão com solda amarela, não fica preta",
-    preco: "R$ 90,00", // Deixe vazio se não tiver
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Cruz trançada",
-    stripeUrl: "https://buy.stripe.com/cNi00c0dj4MH5P2gIM1ZS03",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/cruztrancada.jpeg"
-  },
-   {
-    id: "2",
-    name: "Par de aliança Casamento de 6mm com friso",
-    material: "Moedas Antigas",
-    descricao: "Aliança forjada com moedas de qualidade, com forro de aço para proteção. Garantia Vitalicia.",
-    preco: "R$ 220,00", // Deixe vazio se não tiver
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Par de aliança com friso 6mm",
-    stripeUrl: "https://buy.stripe.com/5kQeV6e496UPgtGeAE1ZS00",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/6mm%20com%20friso.png"
-  },
-   {
-    id: "5",
-    name: "Bracelete em cobre texturizado",
-    material: "Cobre",
-    descricao: "Bracelete forjado a mão com texturas abstratas.",
-    preco: "R$ 120,00", // Deixe vazio se não tiver
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre bracelete texturizado",
-    stripeUrl: "https://buy.stripe.com/bJeeV62lr3IDely8cg1ZS05",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/texturizado.jpeg"
-  },
-  {
-    id: "3",
-    name: "Bracelete liso de cobre 8mm",
-    material: "Cobre",
-    descricao: "Os beneficio do uso de cobre como bracelete para a saude é uma cultura muito antiga. Use as joias de cobre puro", // Exemplo com descrição
-    preco: "90,00",
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Me interesso por Bracelete 8mm de cobre",
-    stripeUrl: "https://buy.stripe.com/28E00caRXenh7XaeAE1ZS02",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg"
-  }
+  <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Os cards são gerados pelo JavaScript abaixo -->
+</div>  
+
+<script>
+const produtos = [
+    {
+        id: "1",
+        name: "Par de alianças de cobre",
+        material: "Cobre",
+        descricao: "O Beneficio do uso do cobre, em forma de joias para a saude. Acabamento polido e brilhante.",
+        preco: "R$ 90,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA DE COBRE",
+        stripeUrl: "https://buy.stripe.com/7sY00cd05gvpa5i9gk1ZS01",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alianca-cobre-terapeutica.jpg"
+    },
+    {
+        id: "4",
+        name: "Cruz trançada em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Cruz Trançada em moedas antigas. Feito a mão com solda amarela, não fica preta.",
+        preco: "R$ 90,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Cruz trançada",
+        stripeUrl: "https://buy.stripe.com/cNi00c0dj4MH5P2gIM1ZS03",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/cruztrancada.jpeg"
+    },
+    {
+        id: "2",
+        name: "Par de aliança Casamento de 6mm com friso",
+        material: "Moedas Antigas",
+        descricao: "Aliança forjada com moedas de qualidade, com forro de aço para proteção. Garantia Vitalicia.",
+        preco: "R$ 220,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Par de aliança com friso 6mm",
+        stripeUrl: "https://buy.stripe.com/5kQeV6e496UPgtGeAE1ZS00",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/6mm%20com%20friso.png"
+    },
+    {
+        id: "5",
+        name: "Bracelete em cobre texturizado",
+        material: "Cobre",
+        descricao: "Bracelete forjado a mão com texturas abstratas.",
+        preco: "R$ 120,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre bracelete texturizado",
+        stripeUrl: "https://buy.stripe.com/bJeeV62lr3IDely8cg1ZS05",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/texturizado.jpeg"
+    },
+    {
+        id: "3",
+        name: "Bracelete liso de cobre 8mm",
+        material: "Cobre",
+        descricao: "Os beneficio do uso de cobre como bracelete para a saude é uma cultura muito antiga.",
+        preco: "R$ 90,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Me interesso por Bracelete 8mm de cobre",
+        stripeUrl: "https://buy.stripe.com/28E00caRXenh7XaeAE1ZS02",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg"
+    }
+];
+
+const grid = document.getElementById('catalog-grid');
+
+grid.innerHTML = produtos.map((p, i) => {
+    const precoFormatado = p.preco.startsWith('R$') ? p.preco : 'R$ ' + p.preco;
+    const tag = p.material ? p.material.toUpperCase() : '';
+
+    return `
+        <div class="product-card rounded-2xl border border-white/5 bg-neutral-900/50 overflow-hidden relative"
+             style="animation: fadeInUp 0.6s ease-out ${i * 0.1}s forwards; opacity: 0;">
+
+            <div class="aspect-square overflow-hidden bg-neutral-800 relative">
+                ${tag ? `<span class="absolute top-3 left-3 z-10 text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:rgba(5,5,5,0.7);backdrop-filter:blur(4px);color:#F5A623;border:1px solid rgba(245,166,35,0.2);">${tag}</span>` : ''}
+                <img src="${p.img}" alt="${p.name}" class="product-img w-full h-full object-cover"/>
+            </div>
+
+            <div class="p-5">
+                <h3 class="text-white text-sm font-medium mb-3 leading-snug">${p.name}</h3>
+                <div class="flex items-center justify-between">
+                    <span class="text-gold-400 font-serif text-lg">${precoFormatado}</span>
+                    <a href="${p.stripeUrl}" class="text-[11px] font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition-all duration-300 border border-gold-500/30 text-gold-500 hover:bg-gold-500 hover:text-black">
+                        Pedir
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+}).join('');
+</script>
 ];
 
 let currentFilter = "todos";
