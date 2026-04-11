@@ -26,9 +26,8 @@ nav a{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(
 nav a:hover{color:var(--gold)}
 
 /* HERO VIDEO */
-.hero{position:relative;overflow:hidden;background:var(--dark)}
 .hero-video-wrap{position:relative;width:100%;min-height:82vh;display:flex;align-items:center;justify-content:center}
-.hero-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;object-fit:cover;pointer-events:none}
+.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero-video-overlay{position:absolute;inset:0;background:rgba(26,22,18,0.52);z-index:1}
 .hero-video-content{position:relative;z-index:2;text-align:center;padding:4rem 2rem;max-width:640px;min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .hero-badge{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(232,212,139,0.4);padding:0.3rem 1rem;border-radius:20px;margin-bottom:1.4rem;display:inline-block}
@@ -37,9 +36,6 @@ nav a:hover{color:var(--gold)}
 .hero p{font-size:1rem;color:rgba(250,247,242,0.75);max-width:400px;margin:0 auto 2.2rem;line-height:1.7;font-weight:300}
 .btn-cta{background:var(--gold-dark);color:var(--cream);padding:0.8rem 2rem;border-radius:var(--radius);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;display:inline-block}
 .btn-cta:hover{background:var(--gold)}
-.hero-sound-btn{position:absolute;bottom:1.5rem;right:1.5rem;background:rgba(250,247,242,0.15);border:1px solid rgba(250,247,242,0.3);color:#FAF7F2;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;backdrop-filter:blur(4px);z-index:5}
-.hero-sound-btn:hover{background:rgba(250,247,242,0.3)}
-
 /* FILTER BAR */
 .filter-bar{padding:1.5rem 2rem;display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;justify-content:center;border-bottom:1px solid var(--border);background:var(--white)}
 .filter-btn{border:1px solid var(--border);background:transparent;color:var(--mid);padding:0.4rem 1rem;border-radius:20px;font-family:"Jost",sans-serif;font-size:0.78rem;letter-spacing:0.08em;cursor:pointer;transition:all 0.2s}
@@ -135,15 +131,19 @@ footer strong{color:rgba(255,255,255,0.85);display:block;font-family:"Cormorant 
 <!-- HERO VIDEO -->
 <section class="hero" id="hero">
   <div class="hero-video-wrap">
-    <iframe id="hero-yt" src="https://www.youtube.com/embed/tzL96OgJJ0Y?autoplay=1&mute=1&loop=1&playlist=tzL96OgJJ0Y&controls=0&modestbranding=1&playsinline=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- NOSSA NOVA IMAGEM ESTÁTICA -->
+    <img class="hero-bg-img" src="https://images.unsplash.com/photo-1515562141589-67f0d569b6f5?q=80&w=1920&auto=format&fit=crop" alt="Bicalhos Jóias - Joias Artesanais em São Paulo"/>
+    
     <div class="hero-video-overlay"></div>
     <div class="hero-video-content">
       <span class="hero-badge">Feito à mão · Personalizado para você</span>
       <h1>Você imagina, <em>nós criamos</em></h1>
-      <p>Joias personalizadas em todos os metais — ouro, prata, cobre, latão e alpaca.</p>
+      <p>Joias personalizadas em todos os metais. Atendemos Capão Redondo, Campo Limpo, Taboão da Serra, Embu-Guaçu, Itapecerica da Serra e região.</p>
       <a href="#catalogo" class="btn-cta">Ver Catálogo</a>
     </div>
-    <button class="hero-sound-btn" id="hero-sound-btn" onclick="toggleHeroSound()" title="Ativar/desativar som">🔇</button>
+    <!-- Removemos o botão de som, já que não tem mais vídeo -->
+  </div>
+</section>
   </div>
 </section>
 
@@ -373,14 +373,6 @@ function closeProductModal() {
 }
 
 // ========== HERO VIDEO SOUND ==========
-let heroMuted = true;
-function toggleHeroSound() {
-  heroMuted = !heroMuted;
-  const iframe = document.getElementById("hero-yt");
-  const btn = document.getElementById("hero-sound-btn");
-  iframe.src = `https://www.youtube.com/embed/tzL96OgJJ0Y?autoplay=1&mute=${heroMuted ? "1" : "0"}&loop=1&playlist=tzL96OgJJ0Y&controls=0&modestbranding=1&playsinline=1&rel=0`;
-  btn.textContent = heroMuted ? "🔇" : "🔊";
-}
 
 // ========== UTILS ==========
 function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
