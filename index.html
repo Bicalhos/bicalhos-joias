@@ -216,91 +216,83 @@ footer strong{color:rgba(255,255,255,0.85);display:block;font-family:"Cormorant 
 
 <div class="toast" id="toast"></div>
 
-const catalogData = [
-  <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <!-- Os cards são gerados pelo JavaScript abaixo -->
-</div>  
+const catalogData = [<div class="catalog-grid" id="catalog-grid"></div>
 
 <script>
-const produtos = [
+var produtos = [
     {
-        id: "1",
         name: "Par de alianças de cobre",
         material: "Cobre",
         descricao: "O Beneficio do uso do cobre, em forma de joias para a saude. Acabamento polido e brilhante.",
         preco: "R$ 90,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA DE COBRE",
         stripeUrl: "https://buy.stripe.com/7sY00cd05gvpa5i9gk1ZS01",
-        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alianca-cobre-terapeutica.jpg"
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/alianca-cobre-terapeutica.jpg"
     },
     {
-        id: "4",
         name: "Cruz trançada em moedas antigas",
         material: "Moedas Antigas",
         descricao: "Cruz Trançada em moedas antigas. Feito a mão com solda amarela, não fica preta.",
         preco: "R$ 90,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Cruz trançada",
         stripeUrl: "https://buy.stripe.com/cNi00c0dj4MH5P2gIM1ZS03",
-        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/cruztrancada.jpeg"
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/cruztrancada.jpeg"
     },
     {
-        id: "2",
         name: "Par de aliança Casamento de 6mm com friso",
         material: "Moedas Antigas",
         descricao: "Aliança forjada com moedas de qualidade, com forro de aço para proteção. Garantia Vitalicia.",
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Par de aliança com friso 6mm",
         stripeUrl: "https://buy.stripe.com/5kQeV6e496UPgtGeAE1ZS00",
-        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/6mm%20com%20friso.png"
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/6mm%20com%20friso.png"
     },
     {
-        id: "5",
         name: "Bracelete em cobre texturizado",
         material: "Cobre",
         descricao: "Bracelete forjado a mão com texturas abstratas.",
         preco: "R$ 120,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre bracelete texturizado",
         stripeUrl: "https://buy.stripe.com/bJeeV62lr3IDely8cg1ZS05",
-        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/texturizado.jpeg"
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/texturizado.jpeg"
     },
     {
-        id: "3",
         name: "Bracelete liso de cobre 8mm",
         material: "Cobre",
         descricao: "Os beneficio do uso de cobre como bracelete para a saude é uma cultura muito antiga.",
         preco: "R$ 90,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Me interesso por Bracelete 8mm de cobre",
         stripeUrl: "https://buy.stripe.com/28E00caRXenh7XaeAE1ZS02",
-        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg"
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg"
     }
 ];
 
-const grid = document.getElementById('catalog-grid');
+document.getElementById('catalog-grid').innerHTML = produtos.map(function(p) {
+    var preco = p.preco.startsWith('R$') ? p.preco : 'R$ ' + p.preco;
+    var tag = p.material ? p.material.toUpperCase() : '';
 
-grid.innerHTML = produtos.map((p, i) => {
-    const precoFormatado = p.preco.startsWith('R$') ? p.preco : 'R$ ' + p.preco;
-    const tag = p.material ? p.material.toUpperCase() : '';
-
-    return `
-        <div class="product-card rounded-2xl border border-white/5 bg-neutral-900/50 overflow-hidden relative"
-             style="animation: fadeInUp 0.6s ease-out ${i * 0.1}s forwards; opacity: 0;">
-
-            <div class="aspect-square overflow-hidden bg-neutral-800 relative">
-                ${tag ? `<span class="absolute top-3 left-3 z-10 text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:rgba(5,5,5,0.7);backdrop-filter:blur(4px);color:#F5A623;border:1px solid rgba(245,166,35,0.2);">${tag}</span>` : ''}
-                <img src="${p.img}" alt="${p.name}" class="product-img w-full h-full object-cover"/>
-            </div>
-
-            <div class="p-5">
-                <h3 class="text-white text-sm font-medium mb-3 leading-snug">${p.name}</h3>
-                <div class="flex items-center justify-between">
-                    <span class="text-gold-400 font-serif text-lg">${precoFormatado}</span>
-                    <a href="${p.stripeUrl}" class="text-[11px] font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition-all duration-300 border border-gold-500/30 text-gold-500 hover:bg-gold-500 hover:text-black">
-                       Pedir
-                    </a>
-                </div>
-            </div>
-        </div>
-    `;
+    return '<div class="product-card">' +
+        '<div class="product-img-wrap">' +
+            (tag ? '<span class="product-material">' + tag + '</span>' : '') +
+            '<img class="product-img" src="' + p.img + '" alt="' + p.name + '"/>' +
+        '</div>' +
+        '<div class="product-info">' +
+            '<div class="product-name">' + p.name + '</div>' +
+            '<div class="product-desc">' + p.descricao + '</div>' +
+            '<div class="product-footer">' +
+                '<span class="product-name" style="font-size:1.1rem">' + preco + '</span>' +
+                '<div style="display:flex;gap:0.5rem;flex-wrap:wrap">' +
+                    '<a href="' + p.whatsapp + '" target="_blank" class="btn-whatsapp">' +
+                        '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.331 0-4.512-.638-6.381-1.748l-.438-.264-2.848.955.955-2.848-.264-.438A9.955 9.955 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>' +
+                        'WhatsApp' +
+                    '</a>' +
+                    '<a href="' + p.stripeUrl + '" target="_blank" class="btn-stripe">' +
+                        'Pedir' +
+                    '</a>' +
+                '</div>' +
+            '</div>' +
+        '</div>' +
+    '</div>';
 }).join('');
 </script>
 ];
