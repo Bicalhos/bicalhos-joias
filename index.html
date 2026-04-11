@@ -105,6 +105,22 @@ footer strong{color:rgba(255,255,255,0.85);display:block;font-family:"Cormorant 
 .dropdown-content a:last-child {
   border-bottom: none;
 }
+  .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+}
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+.product-img {
+    transition: transform 0.7s ease;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 </style>
   <script>
     window.STRIPE_PK = 'pk_live_51TJjzT2WNZz2CqyGLNAhykCBhcjv3rYxFb0AUcNCvHPJQ761RG5QhsL3ybwHXEEWBGFZ7VYvqMo3OgzfdY9MbKXm00krQh67Tn';
