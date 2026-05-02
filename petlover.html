@@ -191,12 +191,19 @@
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .back-link {
-            transition: all 0.3s ease;
+        .back-link { transition: all 0.3s ease; }
+        .back-link:hover { color: #fbbf24; gap: 8px; }
+
+        /* ===== LOGO ===== */
+        .logo-img {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
         }
-        .back-link:hover {
-            color: #fbbf24;
-            gap: 8px;
+        .logo-img-sm {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -224,20 +231,19 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 h-16 flex items-center px-6" style="background: rgba(3,3,4,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: linear-gradient(to top right, #f59e0b, #d97706); box-shadow: 0 0 14px rgba(245,158,11,0.5);">
-                        <span class="iconify text-black" data-icon="mdi:paw" data-width="16"></span>
-                    </div>
-                    <span class="text-sm font-semibold tracking-tight group-hover:text-amber-400 transition-colors duration-150">PETLOVERS</span>
-                </a>
-                <span class="hidden sm:inline text-[10px] font-medium tracking-widest uppercase text-amber-500/50 ml-1">Cobre Artesanal</span>
-            </div>
+            <a href="index.html" class="flex items-center gap-3 group">
+                <!--
+                    ╔══════════════════════════════════════════╗
+                    ║  SUBSTITUA A URL ABAIXO PELO SEU LOGO  ║
+                    ╚══════════════════════════════════════════╝
+                -->
+                <img src="https://raw.github.com/Bicalhos/bicalhos-joias/main/logotipo2.jpeg" alt="Logo" class="logo-img">
+            </a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#beneficios" class="text-xs text-slate-400 hover:text-white transition-colors duration-150">Benefícios</a>
                 <a href="#galeria" class="text-xs text-slate-400 hover:text-white transition-colors duration-150">Galeria</a>
                 <a href="#sobre" class="text-xs text-slate-400 hover:text-white transition-colors duration-150">Sobre</a>
-                <a href="https://wa.me/5500000000000?text=Olá! Gostaria de saber mais sobre o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-xs font-semibold px-4 py-2 rounded-full flex items-center gap-2">
+                <a href="https://wa.me/5511930026051?text=Olá! Gostaria de saber mais sobre o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-xs font-semibold px-4 py-2 rounded-full flex items-center gap-2">
                     <span class="iconify" data-icon="mdi:whatsapp" data-width="14"></span>
                     Fale Conosco
                 </a>
@@ -251,6 +257,8 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-40 hidden" style="background: rgba(3,3,4,0.95); backdrop-filter: blur(20px);">
         <div class="flex flex-col items-center justify-center h-full gap-8">
+            <!-- Logo no menu mobile -->
+            <img src="https://raw.github.com/Bicalhos/bicalhos-joias/main/logotipo2.jpeg" alt="Logo" class="logo-img mb-4 opacity-80">
             <a href="#beneficios" class="text-2xl font-medium text-slate-300 hover:text-white transition-colors mobile-link">Benefícios</a>
             <a href="#galeria" class="text-2xl font-medium text-slate-300 hover:text-white transition-colors mobile-link">Galeria</a>
             <a href="#sobre" class="text-2xl font-medium text-slate-300 hover:text-white transition-colors mobile-link">Sobre</a>
@@ -259,7 +267,7 @@
                 <span class="iconify" data-icon="mdi:arrow-left" data-width="20"></span>
                 Voltar ao Site
             </a>
-            <a href="https://wa.me/5500000000000?text=Olá! Gostaria de saber mais sobre o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-sm font-semibold px-8 py-3 rounded-full flex items-center gap-3">
+            <a href="https://wa.me/5511930026051?text=Olá! Gostaria de saber mais sobre o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-sm font-semibold px-8 py-3 rounded-full flex items-center gap-3">
                 <span class="iconify" data-icon="mdi:whatsapp" data-width="18"></span>
                 Fale Conosco
             </a>
@@ -284,7 +292,6 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                <!-- Text -->
                 <div class="flex-1 text-center lg:text-left">
                     <div class="reveal inline-flex items-center gap-2 glass-panel rounded-full px-4 py-1.5 mb-8">
                         <span class="w-2 h-2 rounded-full bg-amber-500 relative pulse-ring"></span>
@@ -302,7 +309,7 @@
                     </p>
 
                     <div class="reveal delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://wa.me/5500000000000?text=Olá! Quero encomendar o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-sm font-semibold px-8 py-3.5 rounded-full flex items-center justify-center gap-2.5">
+                        <a href="https://wa.me/5511930026051?text=Olá! Quero encomendar o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-sm font-semibold px-8 py-3.5 rounded-full flex items-center justify-center gap-2.5">
                             <span class="iconify" data-icon="mdi:whatsapp" data-width="18"></span>
                             Quero o Meu
                         </a>
@@ -328,7 +335,6 @@
                     </div>
                 </div>
 
-                <!-- Hero Image -->
                 <div class="reveal delay-200 flex-1 flex justify-center lg:justify-end">
                     <div class="hero-image-wrapper relative">
                         <div class="absolute -inset-8 rounded-3xl" style="background: radial-gradient(circle at center, rgba(180, 100, 30, 0.15) 0%, transparent 70%);"></div>
@@ -559,7 +565,6 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                <!-- PETLOVERS -->
                 <div class="reveal gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-pointer relative group" onclick="openLightbox('https://z-cdn-media.chatglm.cn/files/fedc8e75-a6b3-4d32-8a96-d93cc2ee5945.jpeg?auth_key=1877758824-533d220f6a5a4d5ab916c2088b94bf50-0-daa372fa04f7c0ac11abb8e42ab62f63')">
                     <div class="aspect-square bg-slate-900 overflow-hidden">
                         <img src="https://z-cdn-media.chatglm.cn/files/fedc8e75-a6b3-4d32-8a96-d93cc2ee5945.jpeg?auth_key=1877758824-533d220f6a5a4d5ab916c2088b94bf50-0-daa372fa04f7c0ac11abb8e42ab62f63" alt="PETLOVERS" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -573,8 +578,7 @@
                     </div>
                 </div>
 
-                <!-- Placeholders -->
-                <div class="reveal delay-100 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative group">
+                <div class="reveal delay-100 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative">
                     <div class="aspect-square bg-slate-900/50 flex flex-col items-center justify-center gap-3">
                         <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                             <span class="iconify text-slate-600" data-icon="mdi:camera-plus-outline" data-width="28"></span>
@@ -586,7 +590,7 @@
                     </div>
                 </div>
 
-                <div class="reveal delay-200 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative group">
+                <div class="reveal delay-200 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative">
                     <div class="aspect-square bg-slate-900/50 flex flex-col items-center justify-center gap-3">
                         <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                             <span class="iconify text-slate-600" data-icon="mdi:camera-plus-outline" data-width="28"></span>
@@ -598,7 +602,7 @@
                     </div>
                 </div>
 
-                <div class="reveal delay-300 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative group">
+                <div class="reveal delay-300 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative">
                     <div class="aspect-square bg-slate-900/50 flex flex-col items-center justify-center gap-3">
                         <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                             <span class="iconify text-slate-600" data-icon="mdi:camera-plus-outline" data-width="28"></span>
@@ -610,7 +614,7 @@
                     </div>
                 </div>
 
-                <div class="reveal gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative group">
+                <div class="reveal gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative">
                     <div class="aspect-square bg-slate-900/50 flex flex-col items-center justify-center gap-3">
                         <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                             <span class="iconify text-slate-600" data-icon="mdi:camera-plus-outline" data-width="28"></span>
@@ -622,7 +626,7 @@
                     </div>
                 </div>
 
-                <div class="reveal delay-100 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative group">
+                <div class="reveal delay-100 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative">
                     <div class="aspect-square bg-slate-900/50 flex flex-col items-center justify-center gap-3">
                         <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                             <span class="iconify text-slate-600" data-icon="mdi:camera-plus-outline" data-width="28"></span>
@@ -634,7 +638,7 @@
                     </div>
                 </div>
 
-                <div class="reveal delay-200 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative group">
+                <div class="reveal delay-200 gallery-item rounded-2xl overflow-hidden border border-white/5 cursor-default relative">
                     <div class="aspect-square bg-slate-900/50 flex flex-col items-center justify-center gap-3">
                         <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                             <span class="iconify text-slate-600" data-icon="mdi:camera-plus-outline" data-width="28"></span>
@@ -766,11 +770,11 @@
                 Cada bracelete PETLOVERS é feito sob encomenda. Garanta o seu e carregue o amor do seu pet com você, em cada momento.
             </p>
             <div class="reveal delay-300 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5500000000000?text=Olá! Quero pedir meu bracelete PETLOVERS 🐾❤️" target="_blank" class="btn-primary text-sm font-semibold px-10 py-4 rounded-full flex items-center justify-center gap-2.5">
+                <a href="https://wa.me/5511930026051?text=Olá! Quero pedir meu bracelete PETLOVERS 🐾❤️" target="_blank" class="btn-primary text-sm font-semibold px-10 py-4 rounded-full flex items-center justify-center gap-2.5">
                     <span class="iconify" data-icon="mdi:cart-outline" data-width="18"></span>
                     Comprar Agora
                 </a>
-                <a href="https://wa.me/5500000000000?text=Olá! Tenho dúvidas sobre o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-sm font-semibold px-10 py-4 rounded-full flex items-center justify-center gap-2.5">
+                <a href="https://wa.me/5511930026051?text=Olá! Tenho dúvidas sobre o bracelete PETLOVERS" target="_blank" class="btn-whatsapp text-sm font-semibold px-10 py-4 rounded-full flex items-center justify-center gap-2.5">
                     <span class="iconify" data-icon="mdi:whatsapp" data-width="18"></span>
                     Tirar Dúvidas
                 </a>
@@ -783,13 +787,16 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="w-7 h-7 rounded-full flex items-center justify-center" style="background: linear-gradient(to top right, #f59e0b, #d97706);">
-                        <span class="iconify text-black" data-icon="mdi:paw" data-width="14"></span>
-                    </div>
+                    <!--
+                        ╔══════════════════════════════════════════╗
+                        ║  SUBSTITUA A URL ABAIXO PELO SEU LOGO  ║
+                        ╚══════════════════════════════════════════╝
+                    -->
+                    <img src="https://raw.github.com/Bicalhos/bicalhos-joias/main/logotipo2.jpeg" alt="Logo" class="logo-img-sm">
                     <span class="text-xs font-medium text-slate-500 group-hover:text-slate-300 transition-colors">PETLOVERS — Cobre Artesanal</span>
                 </a>
                 <div class="flex items-center gap-6">
-                    <a href="https://wa.me/5500000000000" target="_blank" class="text-slate-600 hover:text-amber-400 transition-colors duration-150">
+                    <a href="https://wa.me/5511930026051" target="_blank" class="text-slate-600 hover:text-amber-400 transition-colors duration-150">
                         <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
                     </a>
                     <a href="#" class="text-slate-600 hover:text-amber-400 transition-colors duration-150">
@@ -805,7 +812,7 @@
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5500000000000?text=Olá! Vi o bracelete PETLOVERS 🐾" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full btn-whatsapp flex items-center justify-center shadow-2xl" style="box-shadow: 0 0 30px rgba(37,211,102,0.4);">
+    <a href="https://wa.me/5511930026051?text=Olá! Vi o bracelete PETLOVERS 🐾" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full btn-whatsapp flex items-center justify-center shadow-2xl" style="box-shadow: 0 0 30px rgba(37,211,102,0.4);">
         <span class="iconify" data-icon="mdi:whatsapp" data-width="28"></span>
     </a>
 
@@ -824,18 +831,14 @@
     </div>
 
     <script>
-        // Scroll Reveal
         function revealOnScroll() {
             document.querySelectorAll('.reveal').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 60) {
-                    el.classList.add('active');
-                }
+                if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('active');
             });
         }
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
 
-        // Mobile Menu
         const mobileMenu = document.getElementById('mobileMenu');
         document.getElementById('mobileMenuBtn').addEventListener('click', () => {
             mobileMenu.classList.remove('hidden');
@@ -848,7 +851,6 @@
         document.getElementById('mobileMenuClose').addEventListener('click', closeMobileMenu);
         document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMobileMenu));
 
-        // Lightbox
         function openLightbox(src) {
             if (!src) return;
             document.getElementById('lightboxImg').src = src;
@@ -865,7 +867,6 @@
             if (e.key === 'Escape') { closeLightbox(null, true); closeMobileMenu(); }
         });
 
-        // Copy Link
         function copyLink() {
             navigator.clipboard.writeText(window.location.href).then(() => {
                 const toast = document.getElementById('toast');
@@ -874,7 +875,6 @@
             });
         }
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', function(e) {
                 e.preventDefault();
