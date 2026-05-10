@@ -1,39 +1,627 @@
 var produtos = [
+ {
+        name: "Par de ALiança 12mm Alta Espessura em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura 12mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 480,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 12mm",
+       img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/12mmXpressa.jpg"
+    }, 
   {
-    name: "Par de Aliança 12mm Alta Espessura em moedas antigas",
-    material: "Moedas Antigas",
-    descricao: "Lindo par de alianças espessura 12mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
-    preco: "R$ 480,00",
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 12mm",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/12mmXpressa.jpg"
-  },
+        name: "Par de ALiança 4mm em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura 4mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 220,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par 4mm tradicional",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7as%20de%204mm%20tradicional%20em%20campo%20limpo%20e%20cap%C3%A3o%20redondo.jpg"
+    }, 
   {
-    name: "Par de Aliança 4mm em moedas antigas",
-    material: "Moedas Antigas",
-    descricao: "Lindo par de alianças espessura 4mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
-    preco: "R$ 220,00",
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par 4mm tradicional",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7as%20de%204mm%20tradicional%20em%20campo%20limpo%20e%20cap%C3%A3o%20redondo.jpg"
-  },
+        name: "Par de Aliança Concava 8mm em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças Concava 8MM Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Concava",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/par%20de%20alian%C3%A7a%20concava.jpeg"
+    }, 
   {
-    name: "Par de Aliança Côncava 8mm em moedas antigas",
-    material: "Moedas Antigas",
-    descricao: "Lindo par de alianças Côncava 8mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
-    preco: "R$ 300,00",
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Côncava",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/par%20de%20alian%C3%A7a%20concava.jpeg"
-  },
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
   {
-    name: "Par de Aliança Espessa 8mm Moedas antigas",
-    material: "Moedas Antigas",
-    descricao: "Lindo par de alianças espessura alta 8mm. Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
-    preco: "R$ 300,00",
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
-    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
-  },
+        name: "Par de ALiança Diamantado Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças Diamantado Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 380,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pneudiamantado.jpg"
+    }, 
   {
-    name: "Par de Aliança Diamantado Moedas antigas",
-    material: "Moedas Antigas",
-    descricao: "Lindo par de alianças Diamantado Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
-    preco: "R$ 380,00",
-    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho
+        name: "Par de ALiança Fosca com frisos",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças Fosca com friso. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 220,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Fosca",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/foscafriso.jpg"
+    }, 
+  {
+        name: "Par de ALiança Chanfrado 8mm",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças Chanfrado 8mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Chanrado 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanrado8mm.jpg"
+    }, 
+  {
+        name: "Par de ALiança Chanfrado 4mm",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 220,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Chanfrado 4mm",
+        stripeUrl: "https://buy.stripe.com/3cI7sEd05bb55P26481ZS0a",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanfrado%204mm%20moedas%20antigas.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Bracelete de Cobre PetLovers",
+        material: "Cobre",
+        descricao: "Bracelete feito especialmente para os PETLOVERS. Atelie no Capão Redondo. Atendemos as regiões de Camp Limpo e Itapecerica da Serra e Taboão. Alanças de moedas perto de mim. #braceletedecobre, #cobre, #joiasartesanais,#moedasantigas,#pertodemim, #lojafisica, #atelier,",
+        preco: "R$ 90,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Bracelete Petlovers",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete%20petlovers.jpeg"
+    }, 
+  {
+        name: "Par de ALiança Coração em  PRATA 925",
+        material: "Prata 925",
+        descricao: "Alianças de namoro em prata com desenho de coração e fosqueada. Alianças de namoro em Santo amaro, Capão Redondo e Campo limpo. Taboão da Serra e Itapecerica. Atendemos Embu das Artes e Embu guaçu",
+        preco: "R$ 450,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Coração em  PRATA 925",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_192446.jpg"
+    }, 
+  {
+        name: "Par de ALiança 3 zirconias verticais em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças com 3 zirconias verticais. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/3%20zirconias%20verticais.png"
+    }, 
+  {
+        name: "Par de ALiança Espessa 6m Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/Alian%C3%A7a%20de%20moeda%20no%20cap%C3%A3o%20redondo%20e%20campo%20limpo%2C%20tabo%C3%A3o%20da%20serra.png"
+    }, 
+  {
+        name: "Par de ALiança Piramidal",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7a%20piramidal%20em%20moedas%20antigas%20no%20embu%20das%20artes%20e%20itapecerica%20da%20serra.png"
+    }, 
+  {
+        name: "Par de ALiança Espessa CANAL CENTRAL",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/canal%20central.png"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Chanfrada 2 canais",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanfrada%202%20canais%20alian%C3%A7as%20de%20moedas%20no%20tabo%C3%A3o%20da%20serra%20e%20embu%20das%20artes.png"
+    }, 
+  {
+        name: "Par de ALiança Gravação Externa CNC",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/grava%C3%A7%C3%A3o%20externa%20cnc.png"
+    }, 
+  {
+        name: "Cordão Tijolinho 5mm em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Corrente de moedas antigas Tijolinho. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/tijolinho%205mmem%20moeda%20antiga%20no%20tabo%C3%A3o%20da%20serra.jpg"
+    }, 
+  {
+        name: "Pulseira em moedas antigas 10mm.Modelo Grumete",
+        material: "Moedas Antigas",
+        descricao: "Pulseiras e moedas antigas grumete. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pulseira%20de%20moeda%20grumete%2010mm.jpg"
+    }, 
+  {
+        name: "Kit Grumete 10mm em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Kit Grumete 10 mm em moedas antigas. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/kit%20grumete%2010mm%20e%20anel%20em%20moedas%20antigas%20em%20itapecerica%20da%20serra.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+    {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        stripeUrl: "https://buy.stripe.com/3cI7sEd05bb55P26481ZS0a",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 300,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+    }, 
+  {
+        name: "Par de ALiança Dia dos namorados",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_194324.jpg"
+    }, 
+  {
+        name: "Par de ALiança Namoro em Prata 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193935.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa PRATA 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_194221.jpg"
+    }, 
+  {
+        name: "Par de ALiança Namoro em PRATA 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193917.jpg"
+    }, 
+  {
+        name: "Par de ALiança de namoro em prata 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193544.jpg"
+    }, 
+  {
+        name: "Par de ALiança namoro em prata 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193133.jpg"
+    }, 
+  {
+        name: "Par de ALiança PRATA 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193051.jpg"
+    }, 
+  {
+        name: "Par de ALiança PRATA 925",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_192446.jpg"
+    }, 
+  {
+        name: "Par de ALiança Espessa 2 frisos",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/2%20frisos.jpg"
+    }, 
+  {
+        name: "Par de ALiança de namoro em PRATA 925 2 frisos e coração",
+        material: "Prata 925",
+        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/2%20frisos%20e%20cora%C3%A7%C3%A3o.jpg"
+    }, 
+  {
+        name: "Par de Aliança PRATA 925 Canais espelhados",
+        material: "Prata 925",
+        descricao: "Par de Aliança PRATA 925 Canais espelhados. Alianças de namoro no capão Redondo.Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        preco: "R$ 600,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/2%20canais%20espelhados.jpg"
+    }, 
+  {
+        name: "Par de Alianças Diamantado 10mm",
+        material: "Moedas Antigas",
+        descricao: "Par diamantado de Alianças de moedas antigas. Atelie no capão Redondo. Atendemos Todas as regiões de Santo amaro.",
+        preco: "R$ 450,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par de Aliança Diamantado 10mm",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pneudiamantado.jpg"
+    }, 
+  {
+        name: "Bracelete Embossado em cobre",
+        material: "Cobre",
+        descricao: "Bracelete feito especialmente para peças teatrais e apresentações. Atelie da Bicalhos no Capão Redondo. Campo Limpo e Região.",
+        preco: "R$ 350,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Bracelete Emboss",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete%20personalizado%20embossing.%20bicalhos%20joias.%20artesanato%20real.jpeg"
+    }, 
+  {
+        name: "Bracelete Celticos em moedas antigas e cobre",
+        material: "Moedas Antigas",
+        descricao: "Bracelete feito especialmente para peças teatrais e apresentações. Atelie da Bicalhos no Capão Redondo. Campo Limpo e Região.",
+        preco: "R$ 350,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Bracelete Celtico",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/celticos.jpeg"
+    }, 
+  {
+        name: "Alianças Trançadas e Cravejada em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Alianças autorais com elo grumete central e zirconias em toda a extremidade. Linda Aliança de Casamento no capão redondo e Região.",
+        preco: "R$ 1.150,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA trançado e zirconias completo",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7a%20cravejada%20e%20elo%20tran%C3%A7ado%20alian%C3%A7a%20de%20casamento%2C%20alian%C3%A7a%20de%20namoro%2C%20loja%20fisica%2Centregas%20gratis%2C%20distribui%C3%A7%C3%A3o%2C%20atelie%2C%20oficina%20de%20joias.jpg"
+    }, 
+  {
+        name: "Par de alianças 5 ZIRCONIAS",
+        material: "Moedas Antigas",
+        descricao: "Lindo par de ALianças de Casamento com forro de aço. Atelie no Capão Redondo.",
+        preco: "R$ 250,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA 5 zirconias",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/5%20zirconias%20Alian%C3%A7as%20de%20moedas%20no%20cap%C3%A3o%20redondo%20%23campolimpo%20%23santoamaro%20%23Tabo%C3%A3o%20%23embudasartes.jpg"
+    }, 
+  {
+        name: "Alianças de cobre 9mm(Unidade)",
+        material: "Cobre",
+        descricao: "O Beneficio do uso do cobre, em forma de joias para a saude. Acabamento polido e brilhante.",
+        preco: "R$ 50,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA DE COBRE",
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/alianca-cobre-terapeutica.jpg"
+    },
+    {
+        name: "Cruz trançada em moedas antigas",
+        material: "Moedas Antigas",
+        descricao: "Cruz Trançada em moedas antigas. Feito a mão com solda amarela, não fica preta.",
+        preco: "R$ 90,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Cruz trançada",
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/cruztrancada.jpeg"
+    },
+    {
+        name: "Par de aliança Casamento de 6mm com friso",
+        material: "Moedas Antigas",
+        descricao: "Aliança forjada com moedas de qualidade, com forro de aço para proteção. Garantia Vitalicia.",
+        preco: "R$ 220,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Par de aliança com friso 6mm",
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/6mm%20com%20friso.png"
+    },
+    {
+        name: "Bracelete em cobre texturizado",
+        material: "Cobre",
+        descricao: "Bracelete forjado a mão com texturas abstratas.",
+        preco: "R$ 120,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre bracelete texturizado",
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/texturizado.jpeg"
+    },
+    {
+        name: "Bracelete liso de cobre 8mm",
+        material: "Cobre",
+        descricao: "Os beneficio do uso de cobre como bracelete para a saude é uma cultura muito antiga.",
+        preco: "R$ 90,00",
+        whatsapp: "https://wa.me/5511930026051?text=Olá! Me interesso por Bracelete 8mm de cobre",
+        img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg"
+    }
