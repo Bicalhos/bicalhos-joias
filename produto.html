@@ -129,10 +129,11 @@ nav a{display:none}
   (011) 93002-6051
 </footer>
 
+< src="produtos.js"></>
 <script src="produtos.js"></script>
 <script>
 var tamanhoSelecionado = "";
-var tamFixo = false;
+var quantidadeSelecionada = 1;
 
 var params = new URLSearchParams(window.location.search);
 var id = parseInt(params.get('id'));
@@ -146,21 +147,20 @@ if (!p) {
   var meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute('content', p.descricao);
 
-  // Verifica se é produto que precisa de tamanho (alianças)
   var precisaTamanho = p.name.toLowerCase().indexOf("alian") !== -1;
-
   var tamanhoHtml = "";
+
   if (precisaTamanho) {
-var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];    tamanhoHtml =
-      '<div class="size-section">' +
-        '<div class="size-label">Selecione o tamanho: <span id="tam-display"></span></div>' +
-        '<div class="size-grid">' +
-          tamanhos.map(function(t) {
-            return '<button class="size-btn" onclick="selecionarTamanho(' + t + ', this)">' + t + '</button>';
-          }).join('') +
-        '</div>' +
-        '<a href="javascript:void(0)" class="size-guide-link" onclick="openGuide()">Como medir meu dedo?</a>' +
-      '</div>';
+    var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];
+    tamanhoHtml = '<div class="size-section">' +
+      '<div class="size-label">Selecione o tamanho: <span id="tam-display"></span></div>' +
+      '<div class="size-grid">' +
+        tamanhos.map(function(t) {
+          return '<button class="size-btn" onclick="selecionarTamanho(' + t + ', this)">' + t + '</button>';
+        }).join('') +
+      '</div>' +
+      '<a href="javascript:void(0)" class="size-guide-link" onclick="openGuide()">Como medir meu dedo?</a>' +
+    '</div>';
   }
 
   container.innerHTML =
@@ -173,33 +173,11 @@ var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];    tama
         '<p class="product-material">' + p.material + '</p>' +
         '<h1 class="product-title">' + p.name + '</h1>' +
         '<p class="product-desc">' + p.descricao + '</p>' +
-               '<p class="product-price">' + p.preco + '</p>' +
-    var quantidadeSelecionada = 1;
-
-function getQtyHtml(p) {
-  var precisa = p.name.toLowerCase().indexOf("alian") !== -1 || p.name.toLowerCase().indexOf("par") !== -1;
-  if (!precisa) return '';
-  return '<div class="qty-section">' +
-    '<div class="qty-label">Quantidade: <span id="qty-display">1 unidade</span></div>' +
-    '<div class="qty-grid">' +
-      '<button class="qty-btn active" onclick="selecionarQtd(1, this)">1</button>' +
-      '<button class="qty-btn" onclick="selecionarQtd(2, this)">2</button>' +
-    '</div>' +
-  '</div>';
-}
-
-function selecionarQtd(qtd, btn) {
-  quantidadeSelecionada = qtd;
-  var todos = document.querySelectorAll('.qty-btn');
-  for (var i = 0; i < todos.length; i++) todos[i].classList.remove('active');
-  btn.classList.add('active');
-  var display = document.getElementById('qty-display');
-  if (display) display.textContent = qtd === 1 ? '1 unidade' : '2 unidades';
-}    
-    getStatusHtml(p) +
-                getQtyHtml(p) +
+        '<p class="product-price">' + p.preco + '</p>' +
+        getStatusHtml(p) +
+        getQtyHtml(p) +
         tamanhoHtml +
-           '<div style="display:flex;flex-direction:column;gap:0.75rem">' +
+        '<div style="display:flex;flex-direction:column;gap:0.75rem">' +
           '<a href="' + p.whatsapp + '" target="_blank" id="btn-wpp" class="btn-whatsapp" onclick="enviarWhatsApp(event)" style="justify-content:center">' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>' +
             ' Pedir pelo WhatsApp' +
@@ -211,7 +189,6 @@ function selecionarQtd(qtd, btn) {
             '</a>'
           : '') +
         '</div>' +
-        '</a>' +
       '</div>' +
     '</div>';
 }
@@ -227,6 +204,27 @@ function selecionarTamanho(tam, btn) {
   if (display) display.textContent = 'Tam. ' + tam + ' selecionado';
 }
 
+function selecionarQtd(qtd, btn) {
+  quantidadeSelecionada = qtd;
+  var todos = document.querySelectorAll('.qty-btn');
+  for (var i = 0; i < todos.length; i++) todos[i].classList.remove('active');
+  btn.classList.add('active');
+  var display = document.getElementById('qty-display');
+  if (display) display.textContent = qtd === 1 ? '1 unidade' : '2 unidades';
+}
+
+function getQtyHtml(p) {
+  var precisa = p.name.toLowerCase().indexOf("alian") !== -1 || p.name.toLowerCase().indexOf("par") !== -1;
+  if (!precisa) return '';
+  return '<div class="qty-section">' +
+    '<div class="qty-label">Quantidade: <span id="qty-display">1 unidade</span></div>' +
+    '<div class="qty-grid">' +
+      '<button class="qty-btn active" onclick="selecionarQtd(1, this)">1</button>' +
+      '<button class="qty-btn" onclick="selecionarQtd(2, this)">2</button>' +
+    '</div>' +
+  '</div>';
+}
+
 function enviarWhatsApp(e) {
   var precisaTamanho = p.name.toLowerCase().indexOf("alian") !== -1;
   if (precisaTamanho && tamanhoSelecionado === "") {
@@ -235,7 +233,7 @@ function enviarWhatsApp(e) {
     return;
   }
   var msgBase = p.whatsapp;
-   if (tamanhoSelecionado !== "") {
+  if (tamanhoSelecionado !== "") {
     msgBase = msgBase + ' — Tamanho: ' + tamanhoSelecionado;
   }
   if (quantidadeSelecionada === 2) {
@@ -245,14 +243,7 @@ function enviarWhatsApp(e) {
   btn.href = msgBase;
 }
 
-function openGuide() {
-  document.getElementById('size-guide').classList.add('open');
-}
-
-function closeGuide() {
-  document.getElementById('size-guide').classList.remove('open');
-}
-  function getStatusHtml(p) {
+function getStatusHtml(p) {
   if (!p.status) return '';
   var frase = p.status.toLowerCase();
   var classe = 'status-esgotado';
@@ -262,6 +253,12 @@ function closeGuide() {
   else if (frase.indexOf('pré') !== -1 || frase.indexOf('pre') !== -1) classe = 'status-pre-venda';
   return '<span class="product-status ' + classe + '">' + p.status + '</span>';
 }
+
+function openGuide() {
+  document.getElementById('size-guide').classList.add('open');
+}
+
+function closeGuide() {
+  document.getElementById('size-guide').classList.remove('open');
+}
 </script>
-</body>
-</html>
