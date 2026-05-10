@@ -226,7 +226,7 @@ var produtos = [
         descricao: "Lindo par de alianças com 2 solitarios cravejados em PRATA 925 6mm. O melhor atelie do CAPÃO REDONDO.",
         preco: "R$ 650,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
-        img: "https://rae.github.com/Bicalhos/bicalhos-joias/main/20201101_193133.jpg",
+        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193133.jpg",
    pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
