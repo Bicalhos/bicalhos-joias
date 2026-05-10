@@ -30,7 +30,12 @@ nav a:hover{color:var(--gold)}
 .product-title{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:300;line-height:1.2;color:var(--dark);margin-bottom:0.75rem}
 .product-desc{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
 .product-price{font-family:"Cormorant Garamond",serif;font-size:1.8rem;font-weight:400;color:var(--gold-dark);margin-bottom:2rem}
-
+.product-status{display:inline-block;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.5rem;font-weight:500}
+.status-esgotado{background:#fde8e8;color:#b91c1c;border:1px solid #f87171}
+.status-ultimas{background:#fef3c7;color:#92400e;border:1px solid #fbbf24}
+.status-novidade{background:#d1fae5;color:#065f46;border:1px solid #34d399}
+.status-sob-encomenda{background:#e0e7ff;color:#3730a3;border:1px solid #818cf8}
+.status-pre-venda{background:#f3e8ff;color:#6b21a8;border:1px solid #c084fc}
 /* SELETOR DE TAMANHO */
 .size-section{margin-bottom:2rem}
 .size-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
@@ -159,9 +164,10 @@ var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];    tama
         '<p class="product-material">' + p.material + '</p>' +
         '<h1 class="product-title">' + p.name + '</h1>' +
         '<p class="product-desc">' + p.descricao + '</p>' +
-        '<p class="product-price">' + p.preco + '</p>' +
+               '<p class="product-price">' + p.preco + '</p>' +
+        getStatusHtml(p) +
         tamanhoHtml +
-        '<a href="' + p.whatsapp + '" target="_blank" id="btn-wpp" class="btn-whatsapp" onclick="enviarWhatsApp(event)">' +
+    '<a href="' + p.whatsapp + '" target="_blank" id="btn-wpp" class="btn-whatsapp" onclick="enviarWhatsApp(event)">' +
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>' +
           ' Pedir pelo WhatsApp' +
         '</a>' +
@@ -201,6 +207,16 @@ function openGuide() {
 
 function closeGuide() {
   document.getElementById('size-guide').classList.remove('open');
+}
+  function getStatusHtml(p) {
+  if (!p.status) return '';
+  var frase = p.status.toLowerCase();
+  var classe = 'status-esgotado';
+  if (frase.indexOf('última') !== -1) classe = 'status-ultimas';
+  else if (frase.indexOf('novidade') !== -1) classe = 'status-novidade';
+  else if (frase.indexOf('encomenda') !== -1) classe = 'status-sob-encomenda';
+  else if (frase.indexOf('pré') !== -1 || frase.indexOf('pre') !== -1) classe = 'status-pre-venda';
+  return '<span class="product-status ' + classe + '">' + p.status + '</span>';
 }
 </script>
 </body>
