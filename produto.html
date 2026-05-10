@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Produto — Bicalhos Jóias</title>
+<meta name="description" content="Joia artesanal Bicalhos Jóias — Alianças de moedas antigas personalizadas."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--gold:#B8960C;--gold-light:#E8D48B;--gold-dark:#8A6E08;--cream:#FAF7F2;--dark:#1A1612;--mid:#4A3F35;--muted:#8C7B6E;--border:rgba(184,150,12,0.25);--white:#FFFFFF;--radius:4px;--shadow:0 4px 24px rgba(26,22,18,0.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",sans-serif;background:var(--cream);color:var(--dark);min-height:100vh}
+header{position:sticky;top:0;z-index:100;background:rgba(250,247,242,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo-wrap{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+.logo-img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--border);flex-shrink:0}
+.logo-text{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:600;color:var(--gold-dark);letter-spacing:0.04em}
+.logo-text span{font-style:italic;font-weight:300}
+nav a{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;margin-left:1.5rem}
+nav a:hover{color:var(--gold)}
+.back-link{font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;margin-bottom:2rem;transition:color 0.2s}
+.back-link:hover{color:var(--gold)}
+.product-page{max-width:900px;margin:0 auto;padding:3rem 2rem}
+.product-layout{display:flex;gap:3rem;align-items:flex-start}
+.product-image-wrap{flex:1;background:#F5EFE6;border:1px solid var(--border);border-radius:2px;overflow:hidden}
+.product-image-wrap img{width:100%;height:auto;display:block}
+.product-details{flex:1}
+.product-material{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.product-title{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:300;line-height:1.2;color:var(--dark);margin-bottom:0.75rem}
+.product-desc{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
+.product-price{font-family:"Cormorant Garamond",serif;font-size:1.8rem;font-weight:400;color:var(--gold-dark);margin-bottom:2rem}
+.btn-whatsapp{background:#25D366;color:white;border:none;padding:0.85rem 2rem;border-radius:var(--radius);font-family:"Jost",sans-serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;transition:background 0.2s;text-decoration:none}
+.btn-whatsapp:hover{background:#1EAF55}
+.not-found{text-align:center;padding:6rem 2rem}
+.not-found h2{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:300;margin-bottom:1rem}
+.not-found a{color:var(--gold);text-decoration:underline}
+footer{background:var(--dark);color:rgba(255,255,255,0.5);text-align:center;padding:2rem;font-size:0.78rem;letter-spacing:0.08em;margin-top:4rem}
+footer a{color:var(--gold-light);text-decoration:none}
+@media(max-width:640px){
+.product-layout{flex-direction:column}
+.product-page{padding:2rem 1rem}
+nav a{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-wrap">
+    <img src="https://raw.github.com/Bicalhos/bicalhos-joias/main/logotipo2.jpeg" alt="Bicalhos Jóias" class="logo-img"/>
+    <span class="logo-text">Bicalhos <span>Jóias</span></span>
+  </a>
+  <nav>
+    <a href="index.html">Voltar ao Catálogo</a>
+  </nav>
+</header>
+
+<div class="product-page" id="product-page"></div>
+
+<footer>
+  <strong>Bicalhos Jóias — Capão Redondo, SP</strong>
+  (011) 93002-6051
+</footer>
+
+<script>
+var produtos = [
+  {
+    name: "Par de Aliança 12mm Alta Espessura em moedas antigas",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças espessura 12mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 480,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 12mm",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/12mmXpressa.jpg"
+  },
+  {
+    name: "Par de Aliança 4mm em moedas antigas",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças espessura 4mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 220,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par 4mm tradicional",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7as%20de%204mm%20tradicional%20em%20campo%20limpo%20e%20cap%C3%A3o%20redondo.jpg"
+  },
+  {
+    name: "Par de Aliança Côncava 8mm em moedas antigas",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças Côncava 8mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 300,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Côncava",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/par%20de%20alian%C3%A7a%20concava.jpeg"
+  },
+  {
+    name: "Par de Aliança Espessa 8mm Moedas antigas",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças espessura alta 8mm. Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 300,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg"
+  },
+  {
+    name: "Par de Aliança Diamantado Moedas antigas",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças Diamantado Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 380,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Diamantado",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pneudiamantado.jpg"
+  },
+  {
+    name: "Par de Aliança Fosca com frisos",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças Fosca com friso. Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 220,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Fosca",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/foscafriso.jpg"
+  },
+  {
+    name: "Par de Aliança Chanfrado 8mm",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças Chanfrado 8mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 300,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Chanfrado 8mm",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanrado8mm.jpg"
+  },
+  {
+    name: "Par de Aliança Chanfrado 4mm",
+    material: "Moedas Antigas",
+    descricao: "Lindo par de alianças Chanfrado 4mm Fabricado no Capão Redondo. Atendemos também regiões como Campo Limpo, Taboão da Serra e Itapecerica da Serra.",
+    preco: "R$ 220,00",
+    whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Chanfrado 4mm",
+    img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanfrado%204mm%20moedas%20antigas.jpg"
+  }
+];
+
+var params = new URLSearchParams(window.location.search);
+var id = parseInt(params.get('id'));
+var p = produtos[id];
+var container = document.getElementById('product-page');
+
+if (!p) {
+  container.innerHTML = '<div class="not-found"><h2>Produto não encontrado</h2><p style="color:var(--muted);margin-bottom:1.5rem">O produto que você procura não existe.</p><a href="index.html">← Voltar ao catálogo</a></div>';
+} else {
+  document.title = p.name + ' — Bicalhos Jóias';
+  var meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute('content', p.descricao);
+
+  container.innerHTML =
+    '<a href="index.html" class="back-link">← Voltar ao catálogo</a>' +
+    '<div class="product-layout">' +
+      '<div class="product-image-wrap">' +
+        '<img src="' + p.img + '" alt="' + p.name + '"/>' +
+      '</div>' +
+      '<div class="product-details">' +
+        '<p class="product-material">' + p.material + '</p>' +
+        '<h1 class="product-title">' + p.name + '</h1>' +
+        '<p class="product-desc">' + p.descricao + '</p>' +
+        '<p class="product-price">' + p.preco + '</p>' +
+        '<a href="' + p.whatsapp + '" target="_blank" class="btn-whatsapp">' +
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>' +
+          ' Pedir pelo WhatsApp' +
+        '</a>' +
+      '</div>' +
+    '</div>';
+}
+</script>
+</body>
+</html>
