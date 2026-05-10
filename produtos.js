@@ -6,7 +6,7 @@ var produtos = [
         preco: "R$ 480,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 12mm",
        img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/12mmXpressa.jpg",
-  pagamento: "https://pag.ae/seu-link-aqui",
+  pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -16,7 +16,7 @@ var produtos = [
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par 4mm tradicional",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7as%20de%204mm%20tradicional%20em%20campo%20limpo%20e%20cap%C3%A3o%20redondo.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -26,7 +26,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Concava",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/par%20de%20alian%C3%A7a%20concava.jpeg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -36,7 +36,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -46,7 +46,7 @@ var produtos = [
         preco: "R$ 380,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pneudiamantado.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -56,7 +56,7 @@ var produtos = [
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Fosca",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/foscafriso.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -66,7 +66,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Chanrado 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanrado8mm.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -77,7 +77,7 @@ var produtos = [
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Chanfrado 4mm",
         stripeUrl: "https://buy.stripe.com/3cI7sEd05bb55P26481ZS0a",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanfrado%204mm%20moedas%20antigas.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -87,7 +87,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -97,7 +97,7 @@ var produtos = [
         preco: "R$ 90,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Bracelete Petlovers",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete%20petlovers.jpeg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -107,7 +107,7 @@ var produtos = [
         preco: "R$ 450,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Coração em  PRATA 925",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_192446.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -117,7 +117,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/3%20zirconias%20verticais.png",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -127,7 +127,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/Alian%C3%A7a%20de%20moeda%20no%20cap%C3%A3o%20redondo%20e%20campo%20limpo%2C%20tabo%C3%A3o%20da%20serra.png",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -137,7 +137,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7a%20piramidal%20em%20moedas%20antigas%20no%20embu%20das%20artes%20e%20itapecerica%20da%20serra.png",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -147,7 +147,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/canal%20central.png",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -157,7 +157,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -167,7 +167,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanfrada%202%20canais%20alian%C3%A7as%20de%20moedas%20no%20tabo%C3%A3o%20da%20serra%20e%20embu%20das%20artes.png",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "NOVIDADE",
     }, 
   {
@@ -177,7 +177,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/grava%C3%A7%C3%A3o%20externa%20cnc.png",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -187,7 +187,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/tijolinho%205mmem%20moeda%20antiga%20no%20tabo%C3%A3o%20da%20serra.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -197,7 +197,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pulseira%20de%20moeda%20grumete%2010mm.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -207,7 +207,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/kit%20grumete%2010mm%20e%20anel%20em%20moedas%20antigas%20em%20itapecerica%20da%20serra.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -217,7 +217,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -227,7 +227,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -237,7 +237,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
     {
@@ -247,7 +247,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-     pagamento: "https://pag.ae/seu-link-aqui",
+     pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -257,7 +257,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -267,7 +267,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -277,7 +277,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -287,7 +287,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -297,7 +297,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -307,7 +307,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -317,7 +317,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -327,7 +327,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -337,7 +337,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -347,7 +347,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -357,7 +357,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -367,7 +367,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -377,7 +377,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -387,7 +387,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -397,7 +397,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -407,7 +407,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -417,7 +417,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -427,7 +427,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -437,7 +437,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -447,7 +447,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -457,7 +457,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -467,7 +467,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -477,7 +477,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -487,7 +487,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -497,7 +497,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -507,7 +507,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -517,7 +517,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -527,7 +527,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -537,7 +537,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -547,7 +547,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -557,7 +557,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -567,7 +567,7 @@ var produtos = [
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -577,7 +577,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_194324.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -587,7 +587,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193935.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -597,7 +597,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_194221.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -607,7 +607,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193917.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -617,7 +617,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193544.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -627,7 +627,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193133.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -637,7 +637,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_193051.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -647,7 +647,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_192446.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -657,7 +657,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/2%20frisos.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -667,7 +667,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/2%20frisos%20e%20cora%C3%A7%C3%A3o.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -677,7 +677,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/2%20canais%20espelhados.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -687,7 +687,7 @@ var produtos = [
         preco: "R$ 450,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par de Aliança Diamantado 10mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/pneudiamantado.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -697,7 +697,7 @@ var produtos = [
         preco: "R$ 350,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Bracelete Emboss",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/bracelete%20personalizado%20embossing.%20bicalhos%20joias.%20artesanato%20real.jpeg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -707,7 +707,7 @@ var produtos = [
         preco: "R$ 350,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Bracelete Celtico",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/celticos.jpeg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -717,7 +717,7 @@ var produtos = [
         preco: "R$ 1.150,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA trançado e zirconias completo",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7a%20cravejada%20e%20elo%20tran%C3%A7ado%20alian%C3%A7a%20de%20casamento%2C%20alian%C3%A7a%20de%20namoro%2C%20loja%20fisica%2Centregas%20gratis%2C%20distribui%C3%A7%C3%A3o%2C%20atelie%2C%20oficina%20de%20joias.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -727,7 +727,7 @@ var produtos = [
         preco: "R$ 250,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA 5 zirconias",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/5%20zirconias%20Alian%C3%A7as%20de%20moedas%20no%20cap%C3%A3o%20redondo%20%23campolimpo%20%23santoamaro%20%23Tabo%C3%A3o%20%23embudasartes.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     }, 
   {
@@ -737,7 +737,7 @@ var produtos = [
         preco: "R$ 50,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no PAR DE ALIANÇA DE COBRE",
         img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/alianca-cobre-terapeutica.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui",
+   pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     },
     {
@@ -747,7 +747,7 @@ var produtos = [
         preco: "R$ 90,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Cruz trançada",
         img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/cruztrancada.jpeg",
-     pagamento: "https://pag.ae/seu-link-aqui",
+     pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     },
     {
@@ -757,7 +757,7 @@ var produtos = [
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre Par de aliança com friso 6mm",
         img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/6mm%20com%20friso.png",
-     pagamento: "https://pag.ae/seu-link-aqui",
+     pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     },
     {
@@ -767,7 +767,7 @@ var produtos = [
         preco: "R$ 120,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Quero saber sobre bracelete texturizado",
         img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/texturizado.jpeg",
-     pagamento: "https://pag.ae/seu-link-aqui",
+     pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA",
     },
     {
@@ -777,7 +777,7 @@ var produtos = [
         preco: "R$ 90,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Me interesso por Bracelete 8mm de cobre",
         img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg",
-     pagamento: "https://pag.ae/seu-link-aqui",
+     pagamento: "https://link.mercadopago.com.br/bicalhosaliancas",
     status: "SOB ENCOMENDA"
     }
 ];
