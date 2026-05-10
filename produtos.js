@@ -577,7 +577,7 @@ var produtos = [
         preco: "R$ 600,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/20201101_194324.jpg",
-   pagamento: "https://pag.ae/seu-link-aqui"
+   pagamento: "https://pag.ae/seu-link-aqui",
     status: "ESGOTADO",
     }, 
   {
