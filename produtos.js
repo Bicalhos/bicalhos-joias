@@ -778,6 +778,6 @@ var produtos = [
         whatsapp: "https://wa.me/5511930026051?text=Olá! Me interesso por Bracelete 8mm de cobre",
         img: "https://raw.githubusercontent.com/Bicalhos/bicalhos-joias/main/bracelete8mm.jpeg",
      pagamento: "https://pag.ae/seu-link-aqui",
-    status: "ESGOTADO",
+    status: "ESGOTADO"
     }
 ];
