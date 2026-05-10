@@ -875,10 +875,11 @@ function renderProdutos() {
         var preco = p.preco.startsWith('R$') ? p.preco : 'R$ ' + p.preco;
         var tag = p.material ? p.material.toUpperCase() : '';
         return '<div class="product-card" style="animation:fadeInUp 0.5s ease-out ' + (i * 0.08) + 's forwards;opacity:0">' +
-            '<div class="product-img-wrap">' +
-                (tag ? '<span class="product-material">' + tag + '</span>' : '') +
-                '<img class="product-img" src="' + p.img + '" alt="' + p.name + '"/>' +
-            '</div>' +
+            // DEPOIS — foto clicável
+'<a href="produto.html?id=' + i + '" class="product-img-wrap" style="text-decoration:none;display:block">' +
+    '<img class="product-img" src="' + p.img + '" alt="' + p.name + '"/>' +
+    '<span class="product-material">' + p.material + '</span>' +
+'</a>' +
             '<div class="product-info">' +
                 '<div class="product-name">' + p.name + '</div>' +
                 '<div class="product-desc">' + p.descricao + '</div>' +
