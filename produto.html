@@ -36,6 +36,13 @@ nav a:hover{color:var(--gold)}
 .status-novidade{background:#d1fae5;color:#065f46;border:1px solid #34d399}
 .status-sob-encomenda{background:#e0e7ff;color:#3730a3;border:1px solid #818cf8}
 .status-pre-venda{background:#f3e8ff;color:#6b21a8;border:1px solid #c084fc}
+.qty-section{margin-bottom:2rem}
+.qty-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.qty-label span{color:var(--gold-dark);font-weight:500;font-size:0.85rem;text-transform:none;letter-spacing:0}
+.qty-grid{display:flex;gap:0.5rem}
+.qty-btn{width:80px;height:52px;border:1px solid var(--border);background:var(--white);color:var(--mid);font-family:"Jost",sans-serif;font-size:0.85rem;border-radius:var(--radius);cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.qty-btn:hover{border-color:var(--gold);color:var(--gold-dark)}
+.qty-btn.active{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
 /* SELETOR DE TAMANHO */
 .size-section{margin-bottom:2rem}
 .size-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
@@ -167,7 +174,30 @@ var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];    tama
         '<h1 class="product-title">' + p.name + '</h1>' +
         '<p class="product-desc">' + p.descricao + '</p>' +
                '<p class="product-price">' + p.preco + '</p>' +
-        getStatusHtml(p) +
+    var quantidadeSelecionada = 1;
+
+function getQtyHtml(p) {
+  var precisa = p.name.toLowerCase().indexOf("alian") !== -1 || p.name.toLowerCase().indexOf("par") !== -1;
+  if (!precisa) return '';
+  return '<div class="qty-section">' +
+    '<div class="qty-label">Quantidade: <span id="qty-display">1 unidade</span></div>' +
+    '<div class="qty-grid">' +
+      '<button class="qty-btn active" onclick="selecionarQtd(1, this)">1</button>' +
+      '<button class="qty-btn" onclick="selecionarQtd(2, this)">2</button>' +
+    '</div>' +
+  '</div>';
+}
+
+function selecionarQtd(qtd, btn) {
+  quantidadeSelecionada = qtd;
+  var todos = document.querySelectorAll('.qty-btn');
+  for (var i = 0; i < todos.length; i++) todos[i].classList.remove('active');
+  btn.classList.add('active');
+  var display = document.getElementById('qty-display');
+  if (display) display.textContent = qtd === 1 ? '1 unidade' : '2 unidades';
+}    
+    getStatusHtml(p) +
+                getQtyHtml(p) +
         tamanhoHtml +
            '<div style="display:flex;flex-direction:column;gap:0.75rem">' +
           '<a href="' + p.whatsapp + '" target="_blank" id="btn-wpp" class="btn-whatsapp" onclick="enviarWhatsApp(event)" style="justify-content:center">' +
@@ -205,8 +235,11 @@ function enviarWhatsApp(e) {
     return;
   }
   var msgBase = p.whatsapp;
-  if (tamanhoSelecionado !== "") {
+   if (tamanhoSelecionado !== "") {
     msgBase = msgBase + ' — Tamanho: ' + tamanhoSelecionado;
+  }
+  if (quantidadeSelecionada === 2) {
+    msgBase = msgBase + ' — Qtd: 2 unidades';
   }
   var btn = document.getElementById('btn-wpp');
   btn.href = msgBase;
