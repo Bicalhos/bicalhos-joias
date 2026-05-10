@@ -204,25 +204,25 @@ function selecionarTamanho(tam, btn) {
   if (display) display.textContent = 'Tam. ' + tam + ' selecionado';
 }
 
-function selecionarQtd(qtd, btn) {
-  quantidadeSelecionada = qtd;
-  var todos = document.querySelectorAll('.qty-btn');
-  for (var i = 0; i < todos.length; i++) todos[i].classList.remove('active');
-  btn.classList.add('active');
-  var display = document.getElementById('qty-display');
-  if (display) display.textContent = qtd === 1 ? '1 unidade' : '2 unidades';
-}
-
 function getQtyHtml(p) {
   var precisa = p.name.toLowerCase().indexOf("alian") !== -1 || p.name.toLowerCase().indexOf("par") !== -1;
   if (!precisa) return '';
   return '<div class="qty-section">' +
     '<div class="qty-label">Quantidade: <span id="qty-display">1 unidade</span></div>' +
     '<div class="qty-grid">' +
-      '<button class="qty-btn active" onclick="selecionarQtd(1, this)">1</button>' +
-      '<button class="qty-btn" onclick="selecionarQtd(2, this)">2</button>' +
+      '<button id="qty-1" class="qty-btn active" onclick="selecionarQtd(1)">1</button>' +
+      '<button id="qty-2" class="qty-btn" onclick="selecionarQtd(2)">2</button>' +
     '</div>' +
   '</div>';
+}
+
+function selecionarQtd(qtd) {
+  quantidadeSelecionada = qtd;
+  document.getElementById('qty-1').classList.remove('active');
+  document.getElementById('qty-2').classList.remove('active');
+  document.getElementById('qty-' + qtd).classList.add('active');
+  var display = document.getElementById('qty-display');
+  if (display) display.textContent = qtd === 1 ? '1 unidade' : '2 unidades';
 }
 
 function enviarWhatsApp(e) {
