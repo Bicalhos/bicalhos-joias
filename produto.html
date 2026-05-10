@@ -30,20 +30,6 @@ nav a:hover{color:var(--gold)}
 .product-title{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:300;line-height:1.2;color:var(--dark);margin-bottom:0.75rem}
 .product-desc{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
 .product-price{font-family:"Cormorant Garamond",serif;font-size:1.8rem;font-weight:400;color:var(--gold-dark);margin-bottom:2rem}
-.product-status{display:inline-block;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.5rem;font-weight:500}
-.status-esgotado{background:#fde8e8;color:#b91c1c;border:1px solid #f87171}
-.status-ultimas{background:#fef3c7;color:#92400e;border:1px solid #fbbf24}
-.status-novidade{background:#d1fae5;color:#065f46;border:1px solid #34d399}
-.status-sob-encomenda{background:#e0e7ff;color:#3730a3;border:1px solid #818cf8}
-.status-pre-venda{background:#f3e8ff;color:#6b21a8;border:1px solid #c084fc}
-.qty-section{margin-bottom:2rem}
-.qty-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
-.qty-label span{color:var(--gold-dark);font-weight:500;font-size:0.85rem;text-transform:none;letter-spacing:0}
-.qty-grid{display:flex;gap:0.5rem}
-.qty-btn{width:80px;height:52px;border:1px solid var(--border);background:var(--white);color:var(--mid);font-family:"Jost",sans-serif;font-size:0.85rem;border-radius:var(--radius);cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
-.qty-btn:hover{border-color:var(--gold);color:var(--gold-dark)}
-.qty-btn.active{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
-/* SELETOR DE TAMANHO */
 .size-section{margin-bottom:2rem}
 .size-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
 .size-label span{color:var(--gold-dark);font-weight:500;font-size:0.85rem;text-transform:none;letter-spacing:0}
@@ -53,8 +39,6 @@ nav a:hover{color:var(--gold)}
 .size-btn.active{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
 .size-guide-link{font-size:0.72rem;color:var(--muted);text-decoration:underline;text-underline-offset:2px;margin-top:0.5rem;display:inline-block;transition:color 0.2s}
 .size-guide-link:hover{color:var(--gold)}
-
-/* MODAL GUIA DE TAMANHOS */
 .size-guide-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(26,22,18,0.65);align-items:center;justify-content:center;padding:1rem}
 .size-guide-overlay.open{display:flex}
 .size-guide-box{background:var(--cream);max-width:500px;width:100%;border-radius:4px;padding:2rem;position:relative}
@@ -65,10 +49,21 @@ nav a:hover{color:var(--gold)}
 .size-guide-box td{color:var(--mid)}
 .size-guide-box p{font-size:0.78rem;color:var(--muted);line-height:1.6}
 .size-guide-close{position:absolute;top:1rem;right:1rem;background:rgba(250,247,242,0.85);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:10}
-
+.qty-section{margin-bottom:2rem}
+.qty-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.qty-label span{color:var(--gold-dark);font-weight:500;font-size:0.85rem;text-transform:none;letter-spacing:0}
+.qty-grid{display:flex;gap:0.5rem}
+.qty-btn{width:80px;height:52px;border:1px solid var(--border);background:var(--white);color:var(--mid);font-family:"Jost",sans-serif;font-size:0.85rem;border-radius:var(--radius);cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.qty-btn:hover{border-color:var(--gold);color:var(--gold-dark)}
+.qty-btn.active{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
+.product-status{display:inline-block;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.5rem;font-weight:500}
+.status-esgotado{background:#fde8e8;color:#b91c1c;border:1px solid #f87171}
+.status-ultimas{background:#fef3c7;color:#92400e;border:1px solid #fbbf24}
+.status-novidade{background:#d1fae5;color:#065f46;border:1px solid #34d399}
+.status-sob-encomenda{background:#e0e7ff;color:#3730a3;border:1px solid #818cf8}
+.status-pre-venda{background:#f3e8ff;color:#6b21a8;border:1px solid #c084fc}
 .btn-whatsapp{background:#25D366;color:white;border:none;padding:0.85rem 2rem;border-radius:var(--radius);font-family:"Jost",sans-serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;transition:background 0.2s;text-decoration:none}
 .btn-whatsapp:hover{background:#1EAF55}
-.btn-whatsapp:disabled{background:#999;cursor:not-allowed}
 .btn-pagamento{background:var(--gold-dark);color:var(--cream);border:none;padding:0.85rem 2rem;border-radius:var(--radius);font-family:"Jost",sans-serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;transition:background 0.2s;text-decoration:none;justify-content:center}
 .btn-pagamento:hover{background:var(--gold)}
 .not-found{text-align:center;padding:6rem 2rem}
@@ -81,6 +76,7 @@ footer a{color:var(--gold-light);text-decoration:none}
 .product-page{padding:2rem 1rem}
 nav a{display:none}
 .size-btn{width:46px;height:46px;font-size:0.8rem}
+.qty-btn{width:70px;height:46px;font-size:0.8rem}
 }
 </style>
 </head>
@@ -98,7 +94,6 @@ nav a{display:none}
 
 <div class="product-page" id="product-page"></div>
 
-<!-- GUIA DE TAMANHOS MODAL -->
 <div class="size-guide-overlay" id="size-guide" onclick="if(event.target===this)closeGuide()">
   <div class="size-guide-box">
     <button class="size-guide-close" onclick="closeGuide()">×</button>
@@ -119,7 +114,7 @@ nav a{display:none}
       <tr><td>32</td><td>74,5</td><td>23,7</td></tr>
       <tr><td>34</td><td>77,0</td><td>24,5</td></tr>
       <tr><td>36</td><td>79,5</td><td>25,3</td></tr>
-    </table>    </table>
+    </table>
     <p><strong>Como medir:</strong> Enrole uma fita métrica ao redor do dedo. O valor em milímetros é o perímetro. Compare com a tabela acima para encontrar seu tamanho.</p>
   </div>
 </div>
@@ -129,17 +124,18 @@ nav a{display:none}
   (011) 93002-6051
 </footer>
 
-< src="produtos.js"></>
 <script src="produtos.js"></script>
 <script>
 var tamanhoSelecionado = "";
 var tamanhoSelecionado2 = "";
 var quantidadeSelecionada = 1;
-  
+
 var params = new URLSearchParams(window.location.search);
 var id = parseInt(params.get('id'));
 var p = produtos[id];
 var container = document.getElementById('product-page');
+
+var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];
 
 if (!p) {
   container.innerHTML = '<div class="not-found"><h2>Produto não encontrado</h2><p style="color:var(--muted);margin-bottom:1.5rem">O produto que você procura não existe.</p><a href="index.html">← Voltar ao catálogo</a></div>';
@@ -148,14 +144,53 @@ if (!p) {
   var meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute('content', p.descricao);
 
-    var precisaTamanho = p.name.toLowerCase().indexOf("alian") !== -1;
-  var tamanhos = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];
-  var botoesTamanho = tamanhos.map(function(t) {
+  var precisaTamanho = p.name.toLowerCase().indexOf("alian") !== -1;
+  var precisaQtd = p.name.toLowerCase().indexOf("alian") !== -1 || p.name.toLowerCase().indexOf("par") !== -1;
+
+  var botoesTam1 = tamanhos.map(function(t) {
     return '<button class="size-btn" onclick="selecionarTamanho(' + t + ')">' + t + '</button>';
   }).join('');
-  var botoesTamanho2 = tamanhos.map(function(t) {
+
+  var botoesTam2 = tamanhos.map(function(t) {
     return '<button class="size-btn" onclick="selecionarTamanho2(' + t + ')">' + t + '</button>';
   }).join('');
+
+  var htmlTam1 = '';
+  if (precisaTamanho) {
+    htmlTam1 = '<div id="tam-section-1" class="size-section">' +
+      '<div class="size-label">Tamanho da aliança: <span id="tam-display"></span></div>' +
+      '<div class="size-grid" id="tam-grid-1">' + botoesTam1 + '</div>' +
+      '<a href="javascript:void(0)" class="size-guide-link" onclick="openGuide()">Como medir meu dedo?</a>' +
+    '</div>';
+  }
+
+  var htmlTam2 = '';
+  if (precisaTamanho) {
+    htmlTam2 = '<div id="tam-section-2" class="size-section" style="display:none">' +
+      '<div class="size-label">Tamanho da 2ª aliança: <span id="tam-display-2"></span></div>' +
+      '<div class="size-grid" id="tam-grid-2">' + botoesTam2 + '</div>' +
+    '</div>';
+  }
+
+  var htmlQtd = '';
+  if (precisaQtd) {
+    htmlQtd = '<div class="qty-section">' +
+      '<div class="qty-label">Quantidade: <span id="qty-display">1 unidade</span></div>' +
+      '<div class="qty-grid">' +
+        '<button id="qty-1" class="qty-btn active" onclick="selecionarQtd(1)">1</button>' +
+        '<button id="qty-2" class="qty-btn" onclick="selecionarQtd(2)">2</button>' +
+      '</div>' +
+    '</div>';
+  }
+
+  var htmlStatus = getStatusHtml(p);
+
+  var htmlPagamento = '';
+  if (p.pagamento) {
+    htmlPagamento = '<a href="' + p.pagamento + '" target="_blank" class="btn-pagamento">' +
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>' +
+      ' COMPRAR AGORA</a>';
+  }
 
   container.innerHTML =
     '<a href="index.html" class="back-link">← Voltar ao catálogo</a>' +
@@ -168,50 +203,29 @@ if (!p) {
         '<h1 class="product-title">' + p.name + '</h1>' +
         '<p class="product-desc">' + p.descricao + '</p>' +
         '<p class="product-price">' + p.preco + '</p>' +
-        getStatusHtml(p) +
-        getQtyHtml(p) +
-        '<div id="tam-section-1">' +
-          (precisaTamanho ?
-            '<div class="size-section">' +
-              '<div class="size-label">Tamanho da aliança: <span id="tam-display"></span></div>' +
-              '<div class="size-grid" id="tam-grid-1">' + botoesTamanho + '</div>' +
-              '<a href="javascript:void(0)" class="size-guide-link" onclick="openGuide()">Como medir meu dedo?</a>' +
-            '</div>'
-          : '') +
-        '</div>' +
-        '<div id="tam-section-2" style="display:none">' +
-          (precisaTamanho ?
-            '<div class="size-section">' +
-              '<div class="size-label">Tamanho da 2ª aliança: <span id="tam-display-2"></span></div>' +
-              '<div class="size-grid" id="tam-grid-2">' + botoesTamanho2 + '</div>' +
-            '</div>'
-          : '') +
-        '</div>' +
-    '<div style="display:flex;flex-direction:column;gap:0.75rem">' +
+        htmlStatus +
+        htmlQtd +
+        htmlTam1 +
+        htmlTam2 +
+        '<div style="display:flex;flex-direction:column;gap:0.75rem">' +
           '<a href="' + p.whatsapp + '" target="_blank" id="btn-wpp" class="btn-whatsapp" onclick="enviarWhatsApp(event)" style="justify-content:center">' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.852L.063 23.5l5.785-1.517A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.99-1.363l-.357-.213-3.437.9.92-3.349-.234-.374A9.783 9.783 0 012.182 12c0-5.42 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.399 9.818-9.818 9.818z"/></svg>' +
             ' Pedir pelo WhatsApp' +
           '</a>' +
-          (p.pagamento ?
-            '<a href="' + p.pagamento + '" target="_blank" class="btn-pagamento">' +
-              '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>' +
-              ' COMPRAR AGORA' +
-            '</a>'
-          : '') +
+          htmlPagamento +
         '</div>' +
       '</div>' +
     '</div>';
 }
 
-ffunction selecionarTamanho(tam) {
+function selecionarTamanho(tam) {
   tamanhoSelecionado = tam;
   var grid = document.getElementById('tam-grid-1');
   if (grid) {
     var todos = grid.querySelectorAll('.size-btn');
     for (var i = 0; i < todos.length; i++) todos[i].classList.remove('active');
   }
-  var btn = event.target;
-  if (btn) btn.classList.add('active');
+  if (event && event.target) event.target.classList.add('active');
   var display = document.getElementById('tam-display');
   if (display) display.textContent = 'Tam. ' + tam + ' selecionado';
 }
@@ -223,34 +237,9 @@ function selecionarTamanho2(tam) {
     var todos = grid.querySelectorAll('.size-btn');
     for (var i = 0; i < todos.length; i++) todos[i].classList.remove('active');
   }
-  var btn = event.target;
-  if (btn) btn.classList.add('active');
+  if (event && event.target) event.target.classList.add('active');
   var display = document.getElementById('tam-display-2');
   if (display) display.textContent = 'Tam. ' + tam + ' selecionado';
-}
-
-function atualizarTamanhos() {
-  var sec1 = document.getElementById('tam-section-1');
-  var sec2 = document.getElementById('tam-section-2');
-  if (quantidadeSelecionada === 2) {
-    if (sec1) sec1.style.display = 'block';
-    if (sec2) sec2.style.display = 'block';
-  } else {
-    if (sec1) sec1.style.display = 'block';
-    if (sec2) sec2.style.display = 'none';
-  }
-}
-
-function getQtyHtml(p) {
-  var precisa = p.name.toLowerCase().indexOf("alian") !== -1 || p.name.toLowerCase().indexOf("par") !== -1;
-  if (!precisa) return '';
-  return '<div class="qty-section">' +
-    '<div class="qty-label">Quantidade: <span id="qty-display">1 unidade</span></div>' +
-    '<div class="qty-grid">' +
-      '<button id="qty-1" class="qty-btn active" onclick="selecionarQtd(1)">1</button>' +
-      '<button id="qty-2" class="qty-btn" onclick="selecionarQtd(2)">2</button>' +
-    '</div>' +
-  '</div>';
 }
 
 function selecionarQtd(qtd) {
@@ -262,7 +251,10 @@ function selecionarQtd(qtd) {
   if (display) display.textContent = qtd === 1 ? '1 unidade' : '2 unidades (tamanhos individuais)';
   tamanhoSelecionado = "";
   tamanhoSelecionado2 = "";
-  atualizarTamanhos();
+  var sec1 = document.getElementById('tam-section-1');
+  var sec2 = document.getElementById('tam-section-2');
+  if (sec1) sec1.style.display = qtd === 2 ? 'block' : 'block';
+  if (sec2) sec2.style.display = qtd === 2 ? 'block' : 'none';
 }
 
 function enviarWhatsApp(e) {
@@ -308,3 +300,5 @@ function closeGuide() {
   document.getElementById('size-guide').classList.remove('open');
 }
 </script>
+</body>
+</html>
