@@ -1,6 +1,6 @@
 var produtos = [
  {
-        name: "Par de ALiança 12mm Alta Espessura em moedas antigas",
+        name: "Par de ALiança de Casamento 12mm Alta Espessura em moedas antigas",
         material: "Moedas Antigas",
         descricao: "Lindo par de alianças expessura 12mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 480,00",
@@ -10,9 +10,9 @@ var produtos = [
     status: "NOVIDADE",
     }, 
   {
-        name: "Par de ALiança 4mm em moedas antigas",
+        name: "Par de ALiança Casamento 4mm em moedas antigas",
         material: "Moedas Antigas",
-        descricao: "Lindo par de alianças expessura 4mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        descricao: "Lindo par de alianças de casamento expessura 4mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par 4mm tradicional",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/alian%C3%A7as%20de%204mm%20tradicional%20em%20campo%20limpo%20e%20cap%C3%A3o%20redondo.jpg",
@@ -20,9 +20,9 @@ var produtos = [
     status: "NOVIDADE",
     }, 
   {
-        name: "Par de Aliança Concava 8mm em moedas antigas",
+        name: "Par de Aliança de Casamento Concava 8mm em moedas antigas",
         material: "Moedas Antigas",
-        descricao: "Lindo par de alianças Concava 8MM Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        descricao: "Lindo par de alianças casamento Concava 8MM Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Concava",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/par%20de%20alian%C3%A7a%20concava.jpeg",
@@ -30,9 +30,9 @@ var produtos = [
     status: "NOVIDADE",
     }, 
   {
-        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        name: "Par de ALiança Casamento Espessa 8mm Moedas antigas",
         material: "Moedas Antigas",
-        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        descricao: "Lindo par de alianças casamento expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Expressa 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/8mm%20Xpressa.jpg",
@@ -40,7 +40,7 @@ var produtos = [
     status: "NOVIDADE",
     }, 
   {
-        name: "Par de ALiança Diamantado Moedas antigas",
+        name: "Par de ALiança casamento Diamantado Moedas antigas",
         material: "Moedas Antigas",
         descricao: "Lindo par de alianças Diamantado Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 380,00",
@@ -50,9 +50,9 @@ var produtos = [
     status: "SOB ENCOMENDA",
     }, 
   {
-        name: "Par de ALiança Fosca com frisos",
+        name: "Par de ALiança casamento Fosca com frisos",
         material: "Moedas Antigas",
-        descricao: "Lindo par de alianças Fosca com friso. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        descricao: "Lindo par de alianças casamento Fosca com friso. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Fosca",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/foscafriso.jpg",
@@ -60,9 +60,9 @@ var produtos = [
     status: "SOB ENCOMENDA",
     }, 
   {
-        name: "Par de ALiança Chanfrado 8mm",
+        name: "Par de ALiança casamento Chanfrado 8mm",
         material: "Moedas Antigas",
-        descricao: "Lindo par de alianças Chanfrado 8mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        descricao: "Lindo par de alianças casamento Chanfrado 8mm Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 300,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Chanrado 8mm",
         img: "https://raw.github.com/Bicalhos/bicalhos-joias/main/chanrado8mm.jpg",
@@ -70,9 +70,9 @@ var produtos = [
     status: "SOB ENCOMENDA",
     }, 
   {
-        name: "Par de ALiança Chanfrado 4mm",
+        name: "Par de ALiança  casamento Chanfrado 4mm",
         material: "Moedas Antigas",
-        descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
+        descricao: "Lindo par de alianças casamento expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 220,00",
         whatsapp: "https://wa.me/5511930026051?text=Olá! Tenho interesse no Par Chanfrado 4mm",
         stripeUrl: "https://buy.stripe.com/3cI7sEd05bb55P26481ZS0a",
@@ -81,7 +81,7 @@ var produtos = [
     status: "SOB ENCOMENDA",
     }, 
   {
-        name: "Par de ALiança Espessa 8mm Moedas antigas",
+        name: "Par de ALiança casamento Espessa 8mm Moedas antigas",
         material: "Moedas Antigas",
         descricao: "Lindo par de alianças expessura alta 8mm. Fabricado no capão redondo. Atendemos tambem regiões como Campo limpo, Taboão da Serra e ITapecerica da Serra.",
         preco: "R$ 300,00",
